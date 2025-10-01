@@ -153,6 +153,7 @@ export const portfolioData = {
       school: 'Utah Valley University',
       location: 'Orem, UT',
       graduationDate: 'August 2022',
+      logo: '/uvu_logo.png',
       description: 'Focused on strategic product management, technology innovation, and business analytics.',
       achievements: []
     },
@@ -161,6 +162,7 @@ export const portfolioData = {
       school: 'Utah Valley University',
       location: 'Orem, UT',
       graduationDate: 'August 2021',
+      logo: '/uvu_logo.png',
       description: 'Foundation in business operations, management principles, and organizational leadership.',
       achievements: []
     }

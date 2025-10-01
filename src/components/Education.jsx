@@ -76,9 +76,17 @@ const Education = () => {
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-logo flex items-center justify-center">
-                        <FiAward className="w-12 h-12 md:w-16 md:h-16 text-white" />
-                      </div>
+                      {edu.logo ? (
+                        <img 
+                          src={edu.logo} 
+                          alt={edu.school}
+                          className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-logo flex items-center justify-center">
+                          <FiAward className="w-12 h-12 md:w-16 md:h-16 text-white" />
+                        </div>
+                      )}
                     </div>
 
                     {/* Title and Meta Info */}
