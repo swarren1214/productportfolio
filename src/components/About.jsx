@@ -1,0 +1,93 @@
+import { motion } from 'framer-motion'
+import { FiCode, FiAward, FiUsers, FiZap } from 'react-icons/fi'
+import { portfolioData } from '../data/portfolioData'
+
+const About = () => {
+  const { about } = portfolioData
+
+  const iconMap = {
+    Code: FiCode,
+    Award: FiAward,
+    Users: FiUsers,
+    Lightbulb: FiZap
+  }
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8 }
+    }
+  }
+
+  return (
+    <section id="about" className="py-20 bg-white dark:bg-gray-900">
+      <div className="section-container">
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeIn}
+          className="section-title gradient-text"
+        >
+          {about.title}
+        </motion.h2>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Image */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeIn}
+            className="flex justify-center"
+          >
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-200 dark:ring-primary-800">
+              <img 
+                src="/productportfolio/public/headshot.png" 
+                alt={portfolioData.personal.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
+
+          {/* Content */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeIn}
+            className="space-y-6"
+          >
+            {about.bio.map((paragraph, index) => (
+              <p key={index} className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+
+            {/* Highlights */}
+            <div className="grid grid-cols-2 gap-4 pt-4">
+              {about.highlights.map((highlight, index) => {
+                const Icon = iconMap[highlight.icon] || FiCode
+                return (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
+                  >
+                    <Icon className="w-6 h-6 text-primary-600 dark:text-primary-400 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      {highlight.text}
+                    </span>
+                  </div>
+                )
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default About
