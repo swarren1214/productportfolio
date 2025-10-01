@@ -72,7 +72,7 @@ const Projects = () => {
                 <div className="p-6 md:p-8">
                   {/* Header with Logo and Title */}
                   <div 
-                    className="flex items-start gap-4 mb-4 cursor-pointer"
+                    className="flex items-center gap-4 mb-4 cursor-pointer"
                     onClick={() => toggleCard(project.id)}
                   >
                     {/* Company Logo */}
@@ -145,14 +145,21 @@ const Projects = () => {
                     className="overflow-hidden"
                   >
                     {project.achievements && project.achievements.length > 0 && (
-                      <ul className="space-y-3 pt-4 border-t border-gray-200 dark:border-gray-700">
+                      <div className="space-y-3 pt-4 border-t border-gray-200 dark:border-gray-700">
                         {project.achievements.map((achievement, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
-                            <span className="text-purple-600 dark:text-purple-400 mt-1 flex-shrink-0">•</span>
-                            <span className="leading-relaxed">{achievement}</span>
-                          </li>
+                          <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: idx * 0.05 }}
+                            className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg border border-purple-200 dark:border-purple-700/50 hover:border-purple-400 dark:hover:border-purple-500 transition-colors duration-200"
+                          >
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                              {achievement}
+                            </p>
+                          </motion.div>
                         ))}
-                      </ul>
+                      </div>
                     )}
                   </motion.div>
                 </div>
