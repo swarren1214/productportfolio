@@ -46,7 +46,7 @@ const Education = () => {
                       <img 
                         src={edu.logo} 
                         alt={edu.school}
-                        className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover"
+                        className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover bg-white"
                       />
                     ) : (
                       <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-logo flex items-center justify-center">
