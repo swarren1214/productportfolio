@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiArrowRight, FiTrendingUp, FiTarget, FiUsers, FiLayers, FiZap, FiBarChart2, FiCompass, FiCpu } from 'react-icons/fi'
+import { FiArrowRight, FiTrendingUp, FiTarget, FiUsers, FiLayers, FiZap, FiBarChart2, FiCompass, FiCpu, FiBox, FiCheckCircle, FiGrid, FiMonitor, FiPieChart, FiSettings, FiActivity } from 'react-icons/fi'
 import { portfolioData } from '../data/portfolioData'
 
 const Hero = () => {
@@ -25,16 +25,25 @@ const Hero = () => {
     }
   }
 
-  // Floating animated icons representing Product Management
+  // Floating animated icons representing Product Management - doubled density with more size variance
   const floatingIcons = [
-    { Icon: FiTrendingUp, delay: 0, duration: 15, x: '10%', y: '15%', size: 'text-4xl' },
-    { Icon: FiTarget, delay: 2, duration: 18, x: '85%', y: '20%', size: 'text-5xl' },
-    { Icon: FiUsers, delay: 1, duration: 20, x: '15%', y: '75%', size: 'text-6xl' },
+    { Icon: FiTrendingUp, delay: 0, duration: 15, x: '10%', y: '15%', size: 'text-3xl' },
+    { Icon: FiTarget, delay: 2, duration: 18, x: '85%', y: '20%', size: 'text-6xl' },
+    { Icon: FiUsers, delay: 1, duration: 20, x: '15%', y: '75%', size: 'text-7xl' },
     { Icon: FiLayers, delay: 3, duration: 16, x: '80%', y: '70%', size: 'text-4xl' },
     { Icon: FiZap, delay: 4, duration: 19, x: '5%', y: '45%', size: 'text-5xl' },
-    { Icon: FiBarChart2, delay: 1.5, duration: 17, x: '90%', y: '45%', size: 'text-6xl' },
-    { Icon: FiCompass, delay: 2.5, duration: 21, x: '50%', y: '10%', size: 'text-4xl' },
-    { Icon: FiCpu, delay: 3.5, duration: 22, x: '50%', y: '85%', size: 'text-5xl' },
+    { Icon: FiBarChart2, delay: 1.5, duration: 17, x: '90%', y: '45%', size: 'text-7xl' },
+    { Icon: FiCompass, delay: 2.5, duration: 21, x: '50%', y: '10%', size: 'text-3xl' },
+    { Icon: FiCpu, delay: 3.5, duration: 22, x: '50%', y: '85%', size: 'text-6xl' },
+    // Additional icons for density
+    { Icon: FiBox, delay: 0.5, duration: 16, x: '25%', y: '30%', size: 'text-2xl' },
+    { Icon: FiCheckCircle, delay: 1.8, duration: 19, x: '70%', y: '35%', size: 'text-5xl' },
+    { Icon: FiGrid, delay: 2.2, duration: 17, x: '35%', y: '65%', size: 'text-4xl' },
+    { Icon: FiMonitor, delay: 3.8, duration: 20, x: '65%', y: '55%', size: 'text-3xl' },
+    { Icon: FiPieChart, delay: 1.2, duration: 18, x: '20%', y: '55%', size: 'text-6xl' },
+    { Icon: FiSettings, delay: 4.2, duration: 21, x: '75%', y: '15%', size: 'text-2xl' },
+    { Icon: FiActivity, delay: 0.8, duration: 15, x: '40%', y: '25%', size: 'text-5xl' },
+    { Icon: FiLayers, delay: 2.8, duration: 19, x: '60%', y: '80%', size: 'text-7xl' },
   ]
 
   return (
