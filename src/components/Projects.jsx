@@ -29,7 +29,7 @@ const Projects = () => {
         </motion.h2>
 
         <div className="max-w-5xl mx-auto space-y-6">
-          {featuredProjects.map((project) => (
+          {featuredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial="hidden"
@@ -47,11 +47,11 @@ const Projects = () => {
                       <img 
                         src={project.logo} 
                         alt={project.company}
-                        className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
+                        className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover"
                       />
                     ) : (
-                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-logo flex items-center justify-center">
-                        <span className="text-white text-2xl font-bold">
+                      <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-logo flex items-center justify-center">
+                        <span className="text-white text-3xl md:text-4xl font-bold">
                           {project.company?.charAt(0) || 'P'}
                         </span>
                       </div>
