@@ -78,7 +78,7 @@ const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center"
+          className="text-center max-w-5xl mx-auto bg-black/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 lg:p-16"
         >
           <motion.h1
             variants={itemVariants}
