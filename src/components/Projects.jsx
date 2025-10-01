@@ -72,7 +72,7 @@ const Projects = () => {
                 <div className="p-6 md:p-8">
                   {/* Header with Logo and Title */}
                   <div 
-                    className="flex items-center gap-4 mb-4 cursor-pointer"
+                    className={`flex items-center gap-4 cursor-pointer ${isExpanded ? 'mb-4' : ''}`}
                     onClick={() => toggleCard(project.id)}
                   >
                     {/* Company Logo */}
