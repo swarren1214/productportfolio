@@ -25,9 +25,55 @@ const Hero = () => {
     }
   }
 
+  // Particle orbit animations
+  const particles = [
+    { size: 8, delay: 0, duration: 20, radius: 200, color: 'bg-orange-400' },
+    { size: 6, delay: 2, duration: 25, radius: 250, color: 'bg-pink-400' },
+    { size: 10, delay: 4, duration: 22, radius: 300, color: 'bg-purple-400' },
+    { size: 7, delay: 1, duration: 28, radius: 180, color: 'bg-indigo-400' },
+    { size: 9, delay: 3, duration: 24, radius: 270, color: 'bg-blue-400' },
+    { size: 5, delay: 5, duration: 26, radius: 220, color: 'bg-pink-300' },
+  ]
+
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 bg-gradient-logo">
-      <div className="section-container">
+    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 bg-gradient-logo relative overflow-hidden">
+      {/* Animated Particle Orbits */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        {particles.map((particle, index) => (
+          <motion.div
+            key={index}
+            className={`absolute ${particle.color} rounded-full opacity-40 blur-sm`}
+            style={{
+              width: particle.size,
+              height: particle.size,
+            }}
+            animate={{
+              x: [
+                Math.cos(0) * particle.radius,
+                Math.cos(Math.PI / 2) * particle.radius,
+                Math.cos(Math.PI) * particle.radius,
+                Math.cos(3 * Math.PI / 2) * particle.radius,
+                Math.cos(2 * Math.PI) * particle.radius,
+              ],
+              y: [
+                Math.sin(0) * particle.radius,
+                Math.sin(Math.PI / 2) * particle.radius,
+                Math.sin(Math.PI) * particle.radius,
+                Math.sin(3 * Math.PI / 2) * particle.radius,
+                Math.sin(2 * Math.PI) * particle.radius,
+              ],
+            }}
+            transition={{
+              duration: particle.duration,
+              delay: particle.delay,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="section-container relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
