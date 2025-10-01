@@ -35,13 +35,13 @@ const About = () => {
         </motion.h2>
 
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
-          {/* Image */}
+          {/* Image and Highlights */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn}
-            className="flex-shrink-0"
+            className="flex-shrink-0 space-y-6"
           >
             <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-200 dark:ring-primary-800 mx-auto md:mx-0">
               <img 
@@ -49,6 +49,24 @@ const About = () => {
                 alt={portfolioData.personal.name}
                 className="w-full h-full object-cover"
               />
+            </div>
+
+            {/* Highlights */}
+            <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto md:mx-0">
+              {about.highlights.map((highlight, index) => {
+                const Icon = iconMap[highlight.icon] || FiCode
+                return (
+                  <div
+                    key={index}
+                    className="flex items-center gap-2 p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
+                  >
+                    <Icon className="w-5 h-5 text-primary-600 dark:text-primary-400 flex-shrink-0" />
+                    <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                      {highlight.text}
+                    </span>
+                  </div>
+                )
+              })}
             </div>
           </motion.div>
 
@@ -65,24 +83,6 @@ const About = () => {
                 {paragraph}
               </p>
             ))}
-
-            {/* Highlights */}
-            <div className="grid grid-cols-2 gap-4 pt-4">
-              {about.highlights.map((highlight, index) => {
-                const Icon = iconMap[highlight.icon] || FiCode
-                return (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
-                  >
-                    <Icon className="w-6 h-6 text-primary-600 dark:text-primary-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                      {highlight.text}
-                    </span>
-                  </div>
-                )
-              })}
-            </div>
           </motion.div>
         </div>
       </div>
