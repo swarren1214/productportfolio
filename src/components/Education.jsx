@@ -39,7 +39,7 @@ const Education = () => {
             >
               <div className="p-6 md:p-8">
                 {/* Header with Icon and Title */}
-                <div className="flex items-start gap-4">
+                <div className="flex items-center gap-4">
                   {/* Icon */}
                   <div className="flex-shrink-0">
                     {edu.logo ? (
