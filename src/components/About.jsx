@@ -34,16 +34,16 @@ const About = () => {
           {about.title}
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           {/* Image */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn}
-            className="flex justify-center"
+            className="flex-shrink-0"
           >
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-200 dark:ring-primary-800">
+            <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-200 dark:ring-primary-800 mx-auto md:mx-0">
               <img 
                 src="/headshot.png" 
                 alt={portfolioData.personal.name}
@@ -58,7 +58,7 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn}
-            className="space-y-6"
+            className="flex-1 space-y-6"
           >
             {about.bio.map((paragraph, index) => (
               <p key={index} className="text-gray-600 dark:text-gray-300 leading-relaxed">
