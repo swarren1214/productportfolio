@@ -69,7 +69,7 @@ export const portfolioData = {
       title: 'Product Manager II',
       company: 'Aptive Environmental LLC',
       location: 'Provo, UT',
-      period: '06/2023 - Present',
+      period: '08/2023 - Present',
       logo: '/aptive_logo.png',
       achievements: [
         'Led the development of an in-house vehicle routing software, improving average appointments per gallon from 1.5 to 2.0.',
@@ -88,7 +88,7 @@ export const portfolioData = {
       title: 'Product Manager',
       company: 'Legrand North America',
       location: 'Pleasant Grove, UT',
-      period: '05/2021 - 06/2023',
+      period: '05/2021 - 08/2023',
       logo: '/legrand_logo.png',
       achievements: [
         'Operated multiple teams of engineers to effectively plan and coordinate team sprints and execute key product deliverables.',
@@ -105,7 +105,7 @@ export const portfolioData = {
       title: 'Product Management Contractor & UX Designer',
       company: 'Warren Design',
       location: 'Santaquin, UT',
-      period: '03/2018 - 06/2021',
+      period: '03/2019 - 05/2021',
       logo: '/logo.png', // Using the logo we added earlier
       achievements: [
         'Assessed client projects to determine viability/marketability and validate case for ROI.',
