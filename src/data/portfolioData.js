@@ -103,7 +103,7 @@ export const portfolioData = {
     {
       id: 3,
       title: 'Product Management Contractor & UX Designer',
-      company: 'Warren Design — Santaquin, UT',
+      company: 'Warren Design',
       location: 'Santaquin, UT',
       period: '03/2018 - 06/2021',
       logo: '/logo.png', // Using the logo we added earlier
