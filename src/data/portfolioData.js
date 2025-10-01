@@ -25,7 +25,7 @@ export const portfolioData = {
       'In recent years, I have honed my skills as a Product Manager, leading cross-functional teams to develop and launch innovative solutions. At Aptive Environmental, I spearheaded the creation of an in-house vehicle routing software that improved operational efficiency, increasing average appointments per gallon from 1.5 to 2.0. I also designed and launched an intuitive user interface for operations leaders to track routes, schedule appointments, and manage employee shifts, resulting in $2M in annual cost savings.',
       'My background in UX/UI design further complements my Product Management expertise. Running a freelance design business allowed me to work closely with clients to identify core user pain points, create seamless workflows, and validate solutions through usability testing. This focus on user-centric design continues to influence my approach to product development, ensuring that every decision is grounded in empathy and data.'
     ],
-    image: '/productportfolio/headshot.png',
+    image: '/headshot.png',
     highlights: [
       { icon: 'Users', text: 'User Research' },
       { icon: 'Code', text: 'Data Analysis' },
@@ -104,7 +104,7 @@ export const portfolioData = {
       company: 'Warren Design — Santaquin, UT',
       location: 'Santaquin, UT',
       period: '03/2018 - 06/2021',
-      logo: '/productportfolio/logo.png', // Using the logo we added earlier
+      logo: '/logo.png', // Using the logo we added earlier
       achievements: [
         'Assessed client projects to determine viability/marketability and validate case for ROI.',
         'Conducted critical user research/interviews in order to gain insight & empathy regarding problems facing customers.',
@@ -143,7 +143,7 @@ export const portfolioData = {
         icon: 'FaMapMarkerAlt'
       }
     ],
-    resumeUrl: '/productportfolio/resume.pdf'
+    resumeUrl: '/resume.pdf'
   },
 
   // Education Section

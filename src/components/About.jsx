@@ -45,7 +45,7 @@ const About = () => {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-200 dark:ring-primary-800">
               <img 
-                src="/productportfolio/public/headshot.png" 
+                src="/headshot.png" 
                 alt={portfolioData.personal.name}
                 className="w-full h-full object-cover"
               />
