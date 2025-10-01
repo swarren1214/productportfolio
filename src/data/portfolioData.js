@@ -68,7 +68,7 @@ export const portfolioData = {
       company: 'Aptive Environmental LLC',
       location: 'Provo, UT',
       period: '06/2023 - Present',
-      logo: null, // Add logo URL here when available
+      logo: '/aptive_logo.png',
       achievements: [
         'Led the development of an in-house vehicle routing software, improving average appointments per gallon from 1.5 to 2.0.',
         'Identified a critical gap in the software development lifecycle by advocating for a dedicated UI for the routing and scheduling component.',
@@ -87,7 +87,7 @@ export const portfolioData = {
       company: 'Legrand North America',
       location: 'Pleasant Grove, UT',
       period: '05/2021 - 06/2023',
-      logo: null, // Add logo URL here when available
+      logo: '/legrand_logo.png',
       achievements: [
         'Operated multiple teams of engineers to effectively plan and coordinate team sprints and execute key product deliverables.',
         'Oversaw the implementation of agile methodology to complete team sprints and deliver planned product increments on time.',
