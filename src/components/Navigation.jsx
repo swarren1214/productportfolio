@@ -59,7 +59,7 @@ const Navigation = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100/25 dark:hover:bg-gray-800/25 transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
