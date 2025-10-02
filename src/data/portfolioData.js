@@ -262,9 +262,10 @@ export const portfolioData = {
         },
         images: [
           { url: '/deli-dash-team.jpg', caption: 'Daniel and I showing off our new mobile game', featured: true },
-          { url: '/deli-dash-gameplay-1.png', caption: 'Core gameplay: Tap ingredients in sequence' },
-          { url: '/deli-dash-gameplay-2.png', caption: 'Leaderboard competition drove engagement' },
-          { url: '/deli-dash-ui.png', caption: 'Clean, intuitive menu design' }
+          { url: '/deli-dash-store.png', caption: 'In-app purchase store with Deli Dollars, powerups, and customization options' },
+          { url: '/deli-dash-leaderboard.png', caption: 'Competitive leaderboard system that drove player engagement and retention' },
+          { url: '/deli-dash-settings.png', caption: 'Clean settings UI with region selection, audio controls, and purchase restoration' },
+          { url: '/deli-dash-gameplay.png', caption: 'Core gameplay: Race against time to assemble sandwiches by tapping ingredients in the correct sequence' }
         ]
       }
     },
