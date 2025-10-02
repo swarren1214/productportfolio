@@ -5,7 +5,7 @@ export const portfolioData = {
     email: 'swarren@mail.com',
     location: 'Santaquin, UT',
     phone: '801.857.8641',
-    linkedin: 'https://linkedin.com/in/stephenwarren'
+    linkedin: 'https://www.linkedin.com/in/stephen-s-warren/'
   },
 
   hero: {
@@ -126,7 +126,7 @@ export const portfolioData = {
     socialLinks: [
       {
         platform: 'LinkedIn',
-        url: 'https://linkedin.com/in/stephenwarren',
+        url: 'https://www.linkedin.com/in/stephen-s-warren/',
         icon: 'FaLinkedin'
       },
       {
@@ -480,37 +480,43 @@ export const portfolioData = {
       name: 'Khuyen Bui',
       phone: '206.300.5190',
       title: 'VP of Engineering at Aptive',
-      testimonial: 'Khuyen is a very analytical and ROI driven leader. He and I would talk regularly about my product and what KPIs were being measured for success on my product. He has been an invaluable resource for me and an advocate for my career.'
+      testimonial: 'Khuyen is a very analytical and ROI driven leader. He and I would talk regularly about my product and what KPIs were being measured for success on my product. He has been an invaluable resource for me and an advocate for my career.',
+      linkedin: 'https://www.linkedin.com/in/khuyenbui/'
     },
     {
       name: 'Josh Rich',
       phone: '801.823.1863',
       title: 'Product Manager at Aptive',
-      testimonial: 'Josh is a talented Product Manager at Aptive with substantial experience in the field. He and I have become well acquainted and we have mutual admiration for each other\'s skills and strengths.'
+      testimonial: 'Josh is a talented Product Manager at Aptive with substantial experience in the field. He and I have become well acquainted and we have mutual admiration for each other\'s skills and strengths.',
+      linkedin: 'https://www.linkedin.com/in/joshua-rich-86b3b117a/'
     },
     {
       name: 'Jon Jensen',
       phone: '435.764.5801',
       title: 'Senior UX Designer at Aptive',
-      testimonial: 'Jon Jensen was also one of my designers at Aptive (he was eventually moved to other projects), but he and I collaborated closely on my product.'
+      testimonial: 'Jon Jensen was also one of my designers at Aptive (he was eventually moved to other projects), but he and I collaborated closely on my product.',
+      linkedin: 'https://www.linkedin.com/in/jon-jensen-uxc-a806a329/'
     },
     {
       name: 'Grady Kelly',
       phone: '801.913.7024',
       title: 'Director of Product Design at Aptive',
-      testimonial: 'Grady and I worked closely together on many projects at Aptive. He was my designer for a time on our routing UI, and he also has been a great resource for me to prove out ideas.'
+      testimonial: 'Grady and I worked closely together on many projects at Aptive. He was my designer for a time on our routing UI, and he also has been a great resource for me to prove out ideas.',
+      linkedin: 'https://www.linkedin.com/in/grady/'
     },
     {
       name: 'Michael Thurman',
       phone: '801.921.1580',
       title: 'Software Product Manager at Awardco',
-      testimonial: 'Michael Thurman and I have worked closely together at Legrand as he was one of the PMs on the team prior to joining the team at Awardco. He was also in the MBA program with me at Utah Valley University.'
+      testimonial: 'Michael Thurman and I have worked closely together at Legrand as he was one of the PMs on the team prior to joining the team at Awardco. He was also in the MBA program with me at Utah Valley University.',
+      linkedin: 'https://www.linkedin.com/in/michael-thurman/'
     },
     {
       name: 'Mike Thompson',
       phone: '801.709.9014',
       title: 'Director of Program Management at Legrand NA',
-      testimonial: 'Mike Thompson was a great resource and mentor for me during my time at Legrand. His experience in the software industry is extremely impressive and I learned a lot from working on his team.'
+      testimonial: 'Mike Thompson was a great resource and mentor for me during my time at Legrand. His experience in the software industry is extremely impressive and I learned a lot from working on his team.',
+      linkedin: 'https://www.linkedin.com/in/mike-thompson-2553754/'
     }
   ]
 }

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { FiPhone, FiBriefcase, FiUser } from 'react-icons/fi'
+import { FiPhone, FiBriefcase } from 'react-icons/fi'
+import { FaLinkedin } from 'react-icons/fa'
 import { portfolioData } from '../data/portfolioData'
 
 const References = () => {
@@ -95,6 +96,21 @@ const References = () => {
                   "{reference.testimonial}"
                 </p>
               </div>
+
+              {/* LinkedIn Button */}
+              {reference.linkedin && (
+                <div className="mt-4">
+                  <a
+                    href={reference.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-sm font-medium w-full justify-center"
+                  >
+                    <FaLinkedin className="text-lg" />
+                    <span>View LinkedIn Profile</span>
+                  </a>
+                </div>
+              )}
             </motion.div>
           ))}
         </motion.div>
