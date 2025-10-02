@@ -32,7 +32,7 @@ const Navigation = () => {
             <img 
               src="/warren-design-logo.svg" 
               alt="Logo" 
-              className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
+              className="w-10 h-10 transition-transform duration-300 group-hover:scale-110 brightness-0 dark:brightness-100"
             />
             <span className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
               {portfolioData.personal.name}
@@ -45,7 +45,7 @@ const Navigation = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+                className="text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 transition-colors font-medium"
               >
                 {link.name}
               </a>
@@ -73,14 +73,14 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div className="md:hidden bg-white/25 dark:bg-gray-900/25 backdrop-blur-md border-t border-gray-200 dark:border-gray-800">
           <div className="section-container py-4 space-y-2">
             {navLinks.map(link => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={handleLinkClick}
-                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+                className="block py-2 text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 transition-colors font-medium"
               >
                 {link.name}
               </a>
