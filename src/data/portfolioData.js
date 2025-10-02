@@ -174,6 +174,101 @@ export const portfolioData = {
   portfolio: [
     {
       id: 1,
+      title: 'Deli Dash',
+      category: 'Mobile Game Development',
+      description: 'Built a fast-paced mobile game from scratch over 18 months, leading product design and UX while learning critical lessons about product-market fit and iteration speed.',
+      image: '/deli-dash-hero.png', // Placeholder for game screenshot
+      metrics: [
+        { value: '18mo', label: 'Development Time' },
+        { value: '100s+', label: 'Downloads' }
+      ],
+      tags: ['Product Design', 'UX Design', 'User Testing', 'Mobile'],
+      caseStudy: {
+        title: '🎮 Deli Dash: Building a Fast-Paced Mobile Game from Scratch',
+        overview: 'Deli Dash is a fast-paced mobile game where players race against time to assemble sandwiches by tapping ingredient buttons in the correct sequence. What began as a fun side project between two friends evolved into a full-fledged mobile game with a dedicated fanbase and competitive leaderboard culture.\n\nOver 18 months, we built and launched the game from the ground up — my friend focusing on the engineering and backend architecture, while I led product design, user experience, and gameplay mechanics. Despite being a passion project, Deli Dash taught us valuable lessons about product-market fit, iteration speed, and the importance of getting real user feedback early.',
+        role: {
+          title: '💡 My Role',
+          description: 'I served as Product Manager and UX Designer, responsible for:',
+          responsibilities: [
+            'Defining the core gameplay loop and ensuring it was simple yet addictively challenging.',
+            'Designing intuitive tap-based interactions and visual feedback loops to keep players engaged.',
+            'Conducting informal user testing with early beta players to refine pacing and difficulty.',
+            'Creating UI mockups and user flows, including menus, scoreboards, and in-game purchase flows.',
+            'Prioritizing features like leaderboards and power boosts to drive engagement and competition.'
+          ],
+          footer: 'My partner handled engineering, game logic, and Unity implementation, while I focused on ensuring the product felt polished, cohesive, and rewarding.'
+        },
+        challenge: {
+          title: '🏁 The Challenge',
+          description: 'We set out to create a casual mobile game that was both easy to learn and hard to master. Our biggest challenges were:',
+          points: [
+            'Limited time — this was an after-hours project built slowly over 18 months.',
+            'No formal user testing until after launch, which limited early feedback.',
+            'Balancing fun, difficulty, and replayability with limited analytics tools.'
+          ],
+          footer: 'In hindsight, our biggest learning was that waiting until we felt the game was "perfect" delayed valuable insights that real users could have provided earlier.'
+        },
+        launch: {
+          title: '🚀 The Launch',
+          description: 'We launched Deli Dash on both iOS and Android stores.\nWithin weeks, players were competing fiercely on leaderboards, some logging hours of gameplay to climb higher ranks. Despite modest marketing, word-of-mouth spread among competitive casual gamers who enjoyed the pressure of quick decision-making and fast reflexes.',
+          metrics: [
+            'Hundreds of downloads within the first few weeks.',
+            'Dozens of highly engaged players logging multi-hour play sessions.',
+            'Steady ad and in-app purchase revenue post-launch.'
+          ]
+        },
+        lessons: {
+          title: '💬 Lessons Learned',
+          items: [
+            {
+              number: '1',
+              title: 'Launch early, learn fast.',
+              description: 'We waited too long to release our MVP. Early playtesting would have exposed balance issues and user pain points we didn\'t notice internally.'
+            },
+            {
+              number: '2',
+              title: 'Engagement doesn\'t require scale.',
+              description: 'Even with a small user base, the enthusiasm of competitive players proved that depth of engagement can matter more than total downloads.'
+            },
+            {
+              number: '3',
+              title: 'Clarity beats complexity.',
+              description: 'Simple, responsive interactions paired with satisfying sound effects and visual feedback can keep users immersed far longer than we expected.'
+            },
+            {
+              number: '4',
+              title: 'Collaboration thrives with ownership.',
+              description: 'Our two-person team structure worked because we each had full ownership of our domains — I drove product and design decisions, while my partner handled engineering execution.'
+            }
+          ]
+        },
+        improvements: {
+          title: '🧠 What I\'d Do Differently',
+          description: 'If I could go back, I\'d:',
+          points: [
+            'Launch a public beta within 4–6 months.',
+            'Implement analytics and event tracking earlier.',
+            'Add more social and progression-based incentives beyond the leaderboard (like daily challenges or unlockables).'
+          ]
+        },
+        outcome: {
+          title: '🧾 Outcome',
+          description: 'While Deli Dash wasn\'t a financial windfall, it was a creative and professional success. We proved that a small, passionate team could design, build, and launch a polished mobile game from scratch — all while learning core principles of user feedback loops, engagement mechanics, and iterative product design.'
+        },
+        takeaway: {
+          title: '🎯 Takeaway',
+          description: 'Deli Dash reinforced a truth I\'ve carried into every project since:',
+          quote: '"Perfection is the enemy of progress. The sooner users touch your product, the faster you\'ll build something they love."'
+        },
+        images: [
+          { url: '/deli-dash-gameplay-1.png', caption: 'Core gameplay: Tap ingredients in sequence' },
+          { url: '/deli-dash-gameplay-2.png', caption: 'Leaderboard competition drove engagement' },
+          { url: '/deli-dash-ui.png', caption: 'Clean, intuitive menu design' }
+        ]
+      }
+    },
+    {
+      id: 2,
       title: 'Vehicle Routing Optimization System',
       category: 'Product Strategy',
       description: 'Designed and launched an enterprise routing platform that increased field efficiency by 33% and saved $2M annually through intelligent scheduling algorithms and real-time optimization.',
@@ -187,7 +282,7 @@ export const portfolioData = {
     },
     {
       id: 2,
-      title: 'Geo-Based Scheduling Platform',
+      title: 'Vehicle Routing Optimization System',
       category: 'Platform Development',
       description: 'Built requirements and coordinated development for an automated scheduling system that reduced manual route building time by 80% and projected $2.6M in operational savings.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
@@ -200,7 +295,7 @@ export const portfolioData = {
     },
     {
       id: 3,
-      title: 'Enterprise Feature Redesign',
+      title: 'Geo-Based Scheduling Platform',
       category: 'UX Enhancement',
       description: 'Led cross-functional teams to redesign core product features, increasing user efficiency by 10-15% and improving overall product satisfaction scores.',
       image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop',
@@ -213,7 +308,7 @@ export const portfolioData = {
     },
     {
       id: 4,
-      title: 'Client UX Prototyping Suite',
+      title: 'Enterprise Feature Redesign',
       category: 'Design Systems',
       description: 'Created high-fidelity prototypes for multiple client products, achieving 98% user satisfaction through iterative testing and design validation.',
       image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=600&fit=crop',
