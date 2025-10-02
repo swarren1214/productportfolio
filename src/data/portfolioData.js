@@ -13,7 +13,7 @@ export const portfolioData = {
     role: 'Visionary Product Manager',
     tagline: 'Visionary product manager with demonstrated history of elevating user interfaces and delivering world-class experiences through data-driven analysis and strategic design.',
     cta: [
-      { text: 'View My Work', href: '#projects' },
+      { text: 'View My Work', href: '#portfolio' },
       { text: 'Contact Me', href: '#contact', variant: 'outline' }
     ]
   },
