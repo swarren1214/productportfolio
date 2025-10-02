@@ -62,9 +62,17 @@ const References = () => {
               {/* Header */}
               <div className="mb-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl">
-                    {reference.name.split(' ').map(n => n[0]).join('')}
-                  </div>
+                  {reference.image ? (
+                    <img 
+                      src={reference.image} 
+                      alt={reference.name}
+                      className="w-12 h-12 rounded-full object-cover border-2 border-purple-500"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl">
+                      {reference.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  )}
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                       {reference.name}

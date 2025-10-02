@@ -481,35 +481,40 @@ export const portfolioData = {
       phone: '206.300.5190',
       title: 'VP of Engineering at Aptive',
       testimonial: 'Khuyen is a very analytical and ROI driven leader. He and I would talk regularly about my product and what KPIs were being measured for success on my product. He has been an invaluable resource for me and an advocate for my career.',
-      linkedin: 'https://www.linkedin.com/in/khuyenbui/'
+      linkedin: 'https://www.linkedin.com/in/khuyenbui/',
+      image: '/khuyen-bui.png'
     },
     {
       name: 'Josh Rich',
       phone: '801.823.1863',
       title: 'Product Manager at Aptive',
       testimonial: 'Josh is a talented Product Manager at Aptive with substantial experience in the field. He and I have become well acquainted and we have mutual admiration for each other\'s skills and strengths.',
-      linkedin: 'https://www.linkedin.com/in/joshua-rich-86b3b117a/'
+      linkedin: 'https://www.linkedin.com/in/joshua-rich-86b3b117a/',
+      image: '/josh-rich.png'
     },
     {
       name: 'Jon Jensen',
       phone: '435.764.5801',
       title: 'Senior UX Designer at Aptive',
       testimonial: 'Jon Jensen was also one of my designers at Aptive (he was eventually moved to other projects), but he and I collaborated closely on my product.',
-      linkedin: 'https://www.linkedin.com/in/jon-jensen-uxc-a806a329/'
+      linkedin: 'https://www.linkedin.com/in/jon-jensen-uxc-a806a329/',
+      image: '/jon-jensen.png'
     },
     {
       name: 'Grady Kelly',
       phone: '801.913.7024',
       title: 'Director of Product Design at Aptive',
       testimonial: 'Grady and I worked closely together on many projects at Aptive. He was my designer for a time on our routing UI, and he also has been a great resource for me to prove out ideas.',
-      linkedin: 'https://www.linkedin.com/in/grady/'
+      linkedin: 'https://www.linkedin.com/in/grady/',
+      image: '/grady-kelly.png'
     },
     {
       name: 'Michael Thurman',
       phone: '801.921.1580',
       title: 'Software Product Manager at Awardco',
       testimonial: 'Michael Thurman and I have worked closely together at Legrand as he was one of the PMs on the team prior to joining the team at Awardco. He was also in the MBA program with me at Utah Valley University.',
-      linkedin: 'https://www.linkedin.com/in/michael-thurman/'
+      linkedin: 'https://www.linkedin.com/in/michael-thurman/',
+      image: '/michael-thurman.png'
     },
     {
       name: 'Mike Thompson',
