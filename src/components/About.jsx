@@ -76,12 +76,40 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn}
-            className="flex-1 space-y-6"
+            className="flex-1 space-y-8"
           >
-            {about.bio.map((paragraph, index) => (
-              <p key={index} className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {paragraph}
-              </p>
+            {about.sections.map((section, index) => (
+              <div key={index} className="space-y-4">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  {section.heading}
+                </h3>
+                
+                {section.content && (
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {section.content}
+                  </p>
+                )}
+                
+                {section.items && (
+                  <ul className="space-y-4">
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="space-y-1">
+                        <div className="flex items-start gap-2">
+                          <span className="text-primary-600 dark:text-primary-400 font-bold mt-1">•</span>
+                          <div>
+                            <span className="font-semibold text-gray-900 dark:text-white">
+                              {item.title}:
+                            </span>
+                            <span className="text-gray-600 dark:text-gray-300">
+                              {' '}{item.description}
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
           </motion.div>
         </div>

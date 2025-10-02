@@ -20,12 +20,40 @@ export const portfolioData = {
 
   about: {
     title: 'About Me',
-    bio: [
-      'Product Management is where my passion for innovation, strategic execution, and user-centered design converge. I\'ve built my career on solving complex operational challenges and translating them into scalable, intuitive products that drive measurable business impact.',
-      'At Aptive Environmental, I serve as a Product Manager leading the development of Aspyn, a multi-tenant, microservice-based platform that powers field operations, routing, scheduling, licensing, and compliance for one of the largest pest control companies in the U.S. I spearheaded the creation of our in-house routing optimization engine (ARO), which improved operational efficiency by increasing appointments per gallon from 1.5 to 2.0 and reducing fleet travel time by 23%. I also defined and delivered a dedicated routing and scheduling UI that gave operations leaders unprecedented visibility into routes, appointments, and technician shifts—resulting in $2M in annual cost savings.',
-      'Beyond routing, I launched a licensing and compliance platform to ensure EPA and state regulatory adherence, significantly reducing audit risk and streamlining technician credential management. I also established data-driven dashboards for managers, enabling real-time KPI tracking, performance monitoring, and proactive compliance oversight.',
-      'My background in UX/UI design continues to shape my approach as a Product Manager. Having run a freelance design business, I learned the importance of uncovering real user pain points, validating solutions through usability testing, and creating experiences that feel both seamless and powerful. That foundation now informs my product philosophy: every decision must be grounded in empathy, data, and measurable outcomes.',
-      'Today, I thrive at the intersection of technology, operations, and user experience—driving products that deliver strategic business value while making complex workflows intuitive for end users.'
+    sections: [
+      {
+        heading: 'Product Leadership',
+        content: 'I\'m a Product Manager passionate about building platforms that transform complex operations into intuitive, scalable solutions. My work blends innovation, user-centered design, and strategic execution to deliver measurable business impact.'
+      },
+      {
+        heading: 'Recent Accomplishments at Aptive',
+        items: [
+          {
+            title: 'Aspyn Platform',
+            description: 'Leading the development of a multi-tenant, microservice-based enterprise platform powering field operations, routing, scheduling, licensing, and compliance for a $500M+ pest control business.'
+          },
+          {
+            title: 'Routing Optimization (ARO)',
+            description: 'Spearheaded the creation of an in-house routing engine, improving appointments per gallon from 1.5 → 2.0 and reducing fleet travel time by 23%, driving $2M+ in annual cost savings.'
+          },
+          {
+            title: 'Operational UI',
+            description: 'Designed and launched a dedicated routing and scheduling interface that gave leaders real-time visibility into routes, appointments, and technician shifts.'
+          },
+          {
+            title: 'Licensing & Compliance',
+            description: 'Built a compliance platform ensuring EPA and state regulatory adherence, reducing audit risk and streamlining technician credential management.'
+          },
+          {
+            title: 'Data & Analytics',
+            description: 'Delivered dashboards that enabled managers to track KPIs, monitor performance, and enforce compliance in real time.'
+          }
+        ]
+      },
+      {
+        heading: 'Product Philosophy',
+        content: 'Grounded in a background in UX/UI design, I believe every product decision should be informed by empathy, data, and measurable outcomes. My focus is making complex workflows simple—helping users and businesses achieve more with less friction.'
+      }
     ],
     image: '/headshot.png',
     highlights: [
