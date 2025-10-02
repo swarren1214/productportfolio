@@ -369,16 +369,96 @@ export const portfolioData = {
     },
     {
       id: 3,
-      title: 'Vehicle Routing Optimization System',
-      category: 'Product Strategy',
-      description: 'Designed and launched an enterprise routing platform that increased field efficiency by 33% and saved $2M annually through intelligent scheduling algorithms and real-time optimization.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+      title: 'ARO (Aptive Routing Optimization)',
+      category: 'Routing & Scheduling Intelligence',
+      description: 'Led product management for Aptive\'s routing engine, increasing appointments per gallon from 1.5 to 2.0 and achieving 33% efficiency gains through research-driven optimization and systems thinking.',
+      image: '/aro-cover.png',
       metrics: [
         { value: '33%', label: 'Efficiency Gain' },
-        { value: '$2M', label: 'Annual Savings' }
+        { value: '2.0', label: 'Appts/Gallon' }
       ],
-      tags: ['Product Design', 'Data Analysis', 'UX Strategy'],
-      caseStudyUrl: null
+      tags: ['Product Management', 'User Research', 'Data Analysis', 'Enterprise'],
+      caseStudy: {
+        title: '🚚 ARO (Aptive Routing Optimization): Building Intelligence Through Research and Real-World Complexity',
+        overview: 'Aptive Routing Optimization (ARO) is the routing and scheduling engine that powers Aptive\'s national Field Operations network. As the Product Manager for ARO, I led efforts to understand, rebuild, and refine how Aptive manages tens of thousands of service appointments across the United States — balancing geographic, operational, and business constraints in a single, scalable system.\n\nWhile ARO became a powerful operational tool, its greatest success wasn\'t just technological — it was a research-driven understanding of how business rules, integrations, and data models shape routing behavior at scale.',
+        role: {
+          title: '🧭 My Role',
+          description: 'I owned product management for Aptive\'s routing and scheduling software, leading discovery, research, and cross-functional coordination across data science, engineering, and operations teams. My responsibilities included:',
+          responsibilities: [
+            'Conducting extensive user and stakeholder research to identify pain points with existing routing tools.',
+            'Translating complex routing complaints into diagnosable causes — separating technology limitations from business rules.',
+            'Partnering with engineers to improve algorithms while aligning with CRM and operational data models.',
+            'Defining success metrics like appointments per gallon and route efficiency, which later became core KPIs.',
+            'Using findings from ARO to guide the design of the next-generation routing engine built within Aptive\'s new platform.'
+          ]
+        },
+        challenge: {
+          title: '🔍 Research & Discovery',
+          description: 'Routing optimization is one of the most complex areas of Field Operations. Early research made it clear that perceived routing "failures" (like route crossovers or long drive times) often stemmed not from the routing algorithms themselves, but from business-imposed constraints — such as strict technician service zones, skill requirements, or customer time windows.',
+          points: [
+            'Field interviews with Operations Managers and technicians to identify recurring frustrations.',
+            'Root cause analysis sessions with engineering to trace problems to logic boundaries or CRM data integrity.',
+            'Quantitative studies comparing route metrics across offices and scenarios, helping distinguish operational variance from software behavior.'
+          ],
+          footer: 'The outcome of this research helped us reframe internal narratives: routing wasn\'t "broken" — it was faithfully reflecting business logic that didn\'t always align with field realities.'
+        },
+        technical: {
+          title: '⚙️ Technical Context',
+          description: 'ARO was built using open-source optimization frameworks (VROOM and OSRM) augmented with Aptive\'s proprietary logic. It handled:',
+          points: [
+            'Tens of thousands of daily appointments nationwide.',
+            'Dynamic clustering based on proximity, skill, and time windows.',
+            'Predictive service durations modeled from property and historical data.',
+            'Integration with the legacy CRM, which introduced challenges in data consistency and latency.'
+          ],
+          footer: 'This CRM integration was one of the most persistent sources of complexity — routing data had to synchronize with a system never designed for near real-time updates. This friction limited ARO\'s full potential and underscored the need for a unified data model — a key driver behind Aptive\'s new technology platform initiative.'
+        },
+        launch: {
+          title: '📈 Key Results',
+          description: 'Even within those constraints, ARO delivered measurable improvements:',
+          metrics: [
+            '1.5 → 2.0 appointments per gallon, a substantial fuel efficiency gain.',
+            '33% increase in routing efficiency, reducing travel time and increasing SPH (Services Per Hour).',
+            'Daily routing of tens of thousands of appointments across 70+ service centers.'
+          ],
+          footer: 'These results validated ARO\'s core optimization models while revealing deeper system dependencies that the new platform would later address.'
+        },
+        lessons: {
+          title: '🧠 Lessons Learned',
+          items: [
+            {
+              number: '1',
+              title: 'Research first, optimize second.',
+              description: 'Routing is a systems problem — the algorithm is just one part of a broader network of business logic, data, and user behavior.'
+            },
+            {
+              number: '2',
+              title: 'Business rules can outweigh algorithmic intelligence.',
+              description: 'The best route mathematically isn\'t always the best operationally — and business context must define those boundaries consciously.'
+            },
+            {
+              number: '3',
+              title: 'Integration defines reality.',
+              description: 'A routing engine is only as good as the data it consumes. Legacy integrations created blind spots that the new platform aims to eliminate.'
+            },
+            {
+              number: '4',
+              title: 'ARO was a stepping stone, not a finish line.',
+              description: 'The insights gained from ARO directly informed the architecture and design of Aptive\'s next-generation Field Ops system — built on a modern microservice platform with unified data pipelines.'
+            }
+          ]
+        },
+        outcome: {
+          title: '🔮 The Next Chapter',
+          description: 'ARO was more than a product — it was a learning engine. It revealed how technology, data models, and business constraints converge in real-world logistics, and it laid the foundation for a completely new Field Operations platform now in development.\n\nThe upcoming platform, built with ARO\'s lessons at its core, will deliver adaptive, context-aware routing that learns continuously — not just from data, but from the business itself.'
+        },
+        takeaway: {
+          title: '',
+          description: '',
+          quote: '"ARO showed us that optimization isn\'t about perfect routes. It\'s about perfect understanding."'
+        },
+        images: []
+      }
     },
     {
       id: 4,
