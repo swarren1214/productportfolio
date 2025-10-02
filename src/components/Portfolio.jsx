@@ -61,7 +61,10 @@ const Portfolio = () => {
               key={project.id}
               variants={cardVariants}
               whileHover={{ y: -10 }}
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              onClick={() => project.caseStudy && setSelectedProject(project)}
+              className={`bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
+                project.caseStudy ? 'cursor-pointer' : ''
+              }`}
             >
               {/* Project Image */}
               <div className="relative h-64 overflow-hidden bg-gradient-logo">
@@ -126,28 +129,26 @@ const Portfolio = () => {
                 {/* CTA */}
                 <div className="pt-4">
                   {project.caseStudy ? (
-                    <button
-                      onClick={() => setSelectedProject(project)}
-                      className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold transition-colors"
-                    >
+                    <div className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold transition-colors">
                       <span>Read Full Case Study</span>
                       <FiArrowRight className="w-4 h-4" />
-                    </button>
+                    </div>
                   ) : project.caseStudyUrl ? (
                     <a
                       href={project.caseStudyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold transition-colors"
                     >
                       <span>View Case Study</span>
                       <FiExternalLink className="w-4 h-4" />
                     </a>
                   ) : (
-                    <button className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 font-semibold cursor-not-allowed">
+                    <div className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 font-semibold cursor-not-allowed">
                       <span>Case Study Coming Soon</span>
                       <FiArrowRight className="w-4 h-4" />
-                    </button>
+                    </div>
                   )}
                 </div>
               </div>
