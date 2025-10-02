@@ -295,6 +295,33 @@ const Portfolio = () => {
                     </div>
                   )}
 
+                  {/* Video Section */}
+                  {selectedProject.caseStudy.video && (
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        {selectedProject.caseStudy.video.title}
+                      </h3>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        {selectedProject.caseStudy.video.description}
+                      </p>
+                      <div className="relative rounded-xl overflow-hidden shadow-2xl bg-gray-900">
+                        <video
+                          controls
+                          className="w-full h-auto"
+                          preload="metadata"
+                        >
+                          <source src={selectedProject.caseStudy.video.url} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      {selectedProject.caseStudy.video.caption && (
+                        <p className="text-center text-gray-600 dark:text-gray-400 italic text-sm">
+                          {selectedProject.caseStudy.video.caption}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
                   {/* Launch Section */}
                   {selectedProject.caseStudy.launch && (
                     <div className="space-y-4 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl">

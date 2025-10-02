@@ -325,6 +325,12 @@ export const portfolioData = {
           ],
           footer: 'We ran several design-iteration cycles, using mock installations to simulate real-world usage and validate improvements before development.'
         },
+        video: {
+          title: '🎥 Product Demo & Tutorial',
+          description: 'As Product Manager, I created this tutorial video to showcase the new daylight harvesting feature and provide technicians with a step-by-step guide on how to use it effectively in the field.',
+          url: '/dlm-config-video.mp4',
+          caption: 'Feature tutorial demonstrating the new daylight harvesting workflow'
+        },
         launch: {
           title: '🚀 Launch & Reception',
           description: 'After finalizing the design, we implemented and released the new workflow in the mobile app. I had the privilege of unveiling it at the annual Legrand Sales Conference to hundreds of vendors and field reps.\n\nThe response was overwhelmingly positive—sales engineers described the update as "a game-changer" for field efficiency and customer confidence. The new workflow quickly became one of the most-used features in DLM Config.',
