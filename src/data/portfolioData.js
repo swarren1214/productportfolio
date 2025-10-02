@@ -177,7 +177,7 @@ export const portfolioData = {
       title: 'Deli Dash',
       category: 'Mobile Game Development',
       description: 'Built a fast-paced mobile game from scratch over 18 months, leading product design and UX while learning critical lessons about product-market fit and iteration speed.',
-      image: '/deli-dash-hero.png', // Placeholder for game screenshot
+      image: '/deli-dash-cover.png',
       metrics: [
         { value: '18mo', label: 'Development Time' },
         { value: '100s+', label: 'Downloads' }
