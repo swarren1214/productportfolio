@@ -30,7 +30,7 @@ const Navigation = () => {
             className="flex items-center gap-3 group"
           >
             <img 
-              src="/logo.png" 
+              src="/warren-design-logo.svg" 
               alt="Logo" 
               className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
             />
