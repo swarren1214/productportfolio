@@ -6,6 +6,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Portfolio from './components/Portfolio'
 import Education from './components/Education'
+import References from './components/References'
 import Contact from './components/Contact'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Projects />
           <Education />
           <Portfolio />
+          <References />
           <Contact />
         </main>
       </div>
