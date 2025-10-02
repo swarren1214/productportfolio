@@ -73,7 +73,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white/25 dark:bg-gray-900/25 backdrop-blur-md border-t border-gray-200 dark:border-gray-800">
+        <div className="md:hidden bg-white/5 dark:bg-gray-900/5 backdrop-blur-md">
           <div className="section-container py-4 space-y-2">
             {navLinks.map(link => (
               <a

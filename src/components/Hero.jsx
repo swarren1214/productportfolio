@@ -102,27 +102,27 @@ const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center max-w-5xl mx-auto bg-black/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 lg:p-16"
+          className="text-center max-w-5xl mx-auto bg-white/10 dark:bg-black/10 border border-white/10 dark:border-black/10 backdrop-blur-sm shadow-lg rounded-3xl p-8 md:p-12 lg:p-16"
         >
           <motion.h1
             variants={itemVariants}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4"
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-white mb-4"
           >
-            {hero.name}
+            Stephen Warren
           </motion.h1>
           
           <motion.p
             variants={itemVariants}
-            className="text-2xl sm:text-3xl lg:text-4xl text-indigo-100 font-semibold mb-6"
+            className="text-2xl sm:text-3xl lg:text-4xl text-gray-800/50 dark:text-white/50 font-semibold mb-6"
           >
-            {hero.role}
+            Visionary Product Manager
           </motion.p>
           
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-8"
+            className="text-lg sm:text-xl text-gray-800/75 dark:text-white/75 max-w-2xl mx-auto mb-8"
           >
-            {hero.tagline}
+            Elevating interfaces • Optimizing operations • Delivering measurable impact
           </motion.p>
           
           <motion.div
