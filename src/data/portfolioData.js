@@ -261,7 +261,7 @@ export const portfolioData = {
           quote: '"Perfection is the enemy of progress. The sooner users touch your product, the faster you\'ll build something they love."'
         },
         images: [
-          { url: '/deli-dash-team.jpg', caption: 'Daniel and I showing off our new mobile game', featured: true },
+          { url: '/deli-dash-team.jpeg', caption: 'Daniel and I showing off our new mobile game', featured: true },
           { url: '/deli-dash-store.png', caption: 'In-app purchase store with Deli Dollars, powerups, and customization options' },
           { url: '/deli-dash-leaderboard.png', caption: 'Competitive leaderboard system that drove player engagement and retention' },
           { url: '/deli-dash-settings.png', caption: 'Clean settings UI with region selection, audio controls, and purchase restoration' },
@@ -459,45 +459,6 @@ export const portfolioData = {
         },
         images: []
       }
-    },
-    {
-      id: 4,
-      title: 'Vehicle Routing Optimization System',
-      category: 'Platform Development',
-      description: 'Built requirements and coordinated development for an automated scheduling system that reduced manual route building time by 80% and projected $2.6M in operational savings.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-      metrics: [
-        { value: '80%', label: 'Time Saved' },
-        { value: '$2.6M', label: 'Projected Savings' }
-      ],
-      tags: ['Requirements Analysis', 'Automation', 'Compliance'],
-      caseStudyUrl: null
-    },
-    {
-      id: 5,
-      title: 'Geo-Based Scheduling Platform',
-      category: 'UX Enhancement',
-      description: 'Led cross-functional teams to redesign core product features, increasing user efficiency by 10-15% and improving overall product satisfaction scores.',
-      image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop',
-      metrics: [
-        { value: '15%', label: 'Efficiency Boost' },
-        { value: '3', label: 'Teams Coordinated' }
-      ],
-      tags: ['Agile', 'Team Leadership', 'DevOps'],
-      caseStudyUrl: null
-    },
-    {
-      id: 6,
-      title: 'Enterprise Feature Redesign',
-      category: 'Design Systems',
-      description: 'Created high-fidelity prototypes for multiple client products, achieving 98% user satisfaction through iterative testing and design validation.',
-      image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=600&fit=crop',
-      metrics: [
-        { value: '98%', label: 'Satisfaction Rate' },
-        { value: '5+', label: 'Client Projects' }
-      ],
-      tags: ['Prototyping', 'User Testing', 'Figma'],
-      caseStudyUrl: null
     }
   ]
 }
