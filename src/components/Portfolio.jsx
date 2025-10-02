@@ -237,6 +237,31 @@ const Portfolio = () => {
                     </div>
                   )}
 
+                  {/* Featured Team Image - Show right after Role section */}
+                  {selectedProject.caseStudy.images && selectedProject.caseStudy.images.find(img => img.featured) && (
+                    <div className="space-y-4">
+                      {(() => {
+                        const featuredImg = selectedProject.caseStudy.images.find(img => img.featured)
+                        return (
+                          <div className="relative rounded-xl overflow-hidden shadow-xl">
+                            <img
+                              src={featuredImg.url}
+                              alt={featuredImg.caption}
+                              className="w-full h-auto object-cover"
+                              onError={(e) => {
+                                e.target.style.display = 'none'
+                                e.target.parentElement.innerHTML = `<div class="bg-gradient-to-br from-purple-100 to-pink-100 dark:from-gray-800 dark:to-gray-700 p-12 text-center"><p class="text-gray-400 dark:text-gray-500">Image: ${featuredImg.caption}</p></div>`
+                              }}
+                            />
+                            <p className="text-center text-gray-700 dark:text-gray-300 italic mt-4 text-lg">
+                              {featuredImg.caption}
+                            </p>
+                          </div>
+                        )
+                      })()}
+                    </div>
+                  )}
+
                   {/* Challenge Section */}
                   {selectedProject.caseStudy.challenge && (
                     <div className="space-y-4">
@@ -310,11 +335,11 @@ const Portfolio = () => {
                   )}
 
                   {/* Images Gallery */}
-                  {selectedProject.caseStudy.images && selectedProject.caseStudy.images.length > 0 && (
+                  {selectedProject.caseStudy.images && selectedProject.caseStudy.images.filter(img => !img.featured).length > 0 && (
                     <div className="space-y-6">
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">📱 Product Screenshots</h3>
                       <div className="grid md:grid-cols-2 gap-6">
-                        {selectedProject.caseStudy.images.map((img, idx) => (
+                        {selectedProject.caseStudy.images.filter(img => !img.featured).map((img, idx) => (
                           <div key={idx} className="space-y-2">
                             <div className="relative h-64 rounded-lg overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
                               <img

@@ -261,6 +261,7 @@ export const portfolioData = {
           quote: '"Perfection is the enemy of progress. The sooner users touch your product, the faster you\'ll build something they love."'
         },
         images: [
+          { url: '/deli-dash-team.jpg', caption: 'Daniel and I showing off our new mobile game', featured: true },
           { url: '/deli-dash-gameplay-1.png', caption: 'Core gameplay: Tap ingredients in sequence' },
           { url: '/deli-dash-gameplay-2.png', caption: 'Leaderboard competition drove engagement' },
           { url: '/deli-dash-ui.png', caption: 'Clean, intuitive menu design' }
