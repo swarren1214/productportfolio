@@ -274,7 +274,7 @@ export const portfolioData = {
       title: 'DLM Config',
       category: 'Commercial Lighting Control',
       description: 'Redesigned Legrand\'s mobile configuration app for commercial lighting systems, reducing setup time by 50% and transforming field technician productivity through stabilization and UX innovation.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+      image: '/dlm-config-cover.png',
       metrics: [
         { value: '50%', label: 'Faster Setup' },
         { value: '40%+', label: 'Reduced Tap Depth' }
