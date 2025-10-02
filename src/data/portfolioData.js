@@ -251,6 +251,12 @@ export const portfolioData = {
             'Add more social and progression-based incentives beyond the leaderboard (like daily challenges or unlockables).'
           ]
         },
+        video: {
+          title: '🎮 Gameplay Demo',
+          description: 'Watch Deli Dash in action! This gameplay video showcases the core mechanics, fast-paced sandwich assembly, and competitive elements that kept players engaged.',
+          url: '/deli-dash-video.mov',
+          caption: 'Deli Dash gameplay demonstration'
+        },
         outcome: {
           title: '🧾 Outcome',
           description: 'While Deli Dash wasn\'t a financial windfall, it was a creative and professional success. We proved that a small, passionate team could design, build, and launch a polished mobile game from scratch — all while learning core principles of user feedback loops, engagement mechanics, and iterative product design.'

@@ -310,7 +310,10 @@ const Portfolio = () => {
                           className="w-full h-auto"
                           preload="metadata"
                         >
-                          <source src={selectedProject.caseStudy.video.url} type="video/mp4" />
+                          <source 
+                            src={selectedProject.caseStudy.video.url} 
+                            type={selectedProject.caseStudy.video.url.endsWith('.mov') ? 'video/quicktime' : 'video/mp4'} 
+                          />
                           Your browser does not support the video tag.
                         </video>
                       </div>
