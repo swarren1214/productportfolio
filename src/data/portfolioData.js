@@ -271,6 +271,104 @@ export const portfolioData = {
     },
     {
       id: 2,
+      title: 'DLM Config',
+      category: 'Commercial Lighting Control',
+      description: 'Redesigned Legrand\'s mobile configuration app for commercial lighting systems, reducing setup time by 50% and transforming field technician productivity through stabilization and UX innovation.',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+      metrics: [
+        { value: '50%', label: 'Faster Setup' },
+        { value: '40%+', label: 'Reduced Tap Depth' }
+      ],
+      tags: ['Product Management', 'UX Research', 'Field Testing', 'Enterprise'],
+      caseStudy: {
+        title: '💡 DLM Config: Redesigning Commercial Lighting Control for Real-World Usability',
+        overview: 'DLM Config is Legrand\'s mobile application for configuring commercial lighting control systems in the field. When I joined Legrand as a Product Manager, I oversaw three products across their Digital Lighting Management (DLM) ecosystem:\n\n1. DLM Config (Mobile) — The technician-facing app for configuring DLM devices on-site.\n2. LMCS (Desktop) — A more powerful configuration suite for system designers and advanced installers.\n3. LMDS (Web) — Legrand\'s internal system-design software to accelerate project proposals and increase daily submission volume.\n\nWhile each product played a vital role in the commercial-lighting lifecycle, DLM Config became my primary focus due to its impact on field productivity and customer satisfaction.',
+        role: {
+          title: '⚙️ My Role',
+          description: 'As Product Manager for the DLM software suite, I was responsible for:',
+          responsibilities: [
+            'Driving the product vision for the mobile and desktop applications.',
+            'Conducting user research and stakeholder interviews to identify friction points in real installation workflows.',
+            'Partnering closely with engineering to stabilize a buggy Xamarin-based codebase.',
+            'Prototyping and validating new UX flows to improve reliability and speed.',
+            'Leading cross-functional demos and presenting updates to internal and external stakeholders.'
+          ]
+        },
+        challenge: {
+          title: '🚧 The Challenge',
+          description: 'When I inherited DLM Config, it was suffering from poor stability and usability. Built on Xamarin, the app frequently crashed, disconnected from devices, and created frustration among installers in the field.\n\nThrough structured interviews and field-use observation, I discovered that daylight-harvesting calibration was the single largest pain point. This workflow—used to calibrate lighting levels in spaces with natural daylight—was overly complex, unstable, and unpredictable.',
+          points: [
+            'Unclear calibration feedback during setup.',
+            'Inconsistent sensor-reading behavior between devices.',
+            'Excessive trial-and-error required to achieve accurate results.'
+          ],
+          footer: 'Installers described it as "guesswork," and even experienced technicians struggled to complete calibrations successfully. This qualitative research guided our prioritization: before any new features, we had to make daylight harvesting simple, stable, and trustworthy.'
+        },
+        discovery: {
+          title: '🔍 Discovery & Research',
+          description: 'I conducted a series of stakeholder interviews with regional field teams, sales engineers, and system designers to pinpoint where the workflow failed. Common feedback included:',
+          points: [
+            'Unclear calibration feedback during setup.',
+            'Inconsistent sensor-reading behavior between devices.',
+            'Excessive trial-and-error required to achieve accurate results.'
+          ],
+          footer: 'This qualitative research guided our prioritization: before any new features, we had to make daylight harvesting simple, stable, and trustworthy.'
+        },
+        design: {
+          title: '🧪 Design & Iteration',
+          description: 'Working closely with UX and engineering, we developed multiple prototypes for a new Daylight Harvesting Workflow that:',
+          points: [
+            'Provided clear step-by-step guidance for installers.',
+            'Introduced real-time sensor feedback during calibration.',
+            'Simplified data visualization for light-level targets.',
+            'Reduced tap depth and screen transitions by > 40%.'
+          ],
+          footer: 'We ran several design-iteration cycles, using mock installations to simulate real-world usage and validate improvements before development.'
+        },
+        launch: {
+          title: '🚀 Launch & Reception',
+          description: 'After finalizing the design, we implemented and released the new workflow in the mobile app. I had the privilege of unveiling it at the annual Legrand Sales Conference to hundreds of vendors and field reps.\n\nThe response was overwhelmingly positive—sales engineers described the update as "a game-changer" for field efficiency and customer confidence. The new workflow quickly became one of the most-used features in DLM Config.',
+          metrics: [
+            'Stability first: Crash rates reduced significantly after Xamarin refactors.',
+            'Efficiency: Installers reported 50% faster daylight-harvesting setup times.',
+            'Adoption: Positive internal feedback drove rollout across additional product lines.',
+            'Alignment: Unified the mobile and desktop experiences around consistent workflows.'
+          ]
+        },
+        lessons: {
+          title: '🧠 Lessons Learned',
+          items: [
+            {
+              number: '1',
+              title: 'Stabilize before you innovate.',
+              description: 'A poor technical foundation undermines every UX improvement.'
+            },
+            {
+              number: '2',
+              title: 'Listen where the pain is loudest.',
+              description: 'Direct user interviews pinpointed the workflow that truly mattered.'
+            },
+            {
+              number: '3',
+              title: 'Visible progress builds trust.',
+              description: 'Demonstrating improvements publicly (at the sales conference) created internal momentum and stakeholder buy-in.'
+            }
+          ]
+        },
+        outcome: {
+          title: '🎯 Impact',
+          description: 'The DLM Config overhaul not only simplified one of Legrand\'s most complex configuration workflows but also strengthened cross-team collaboration and reinforced user-driven design principles across the entire DLM product family.'
+        },
+        takeaway: {
+          title: '',
+          description: '',
+          quote: '"Perfection isn\'t stability—it\'s confidence. We built an app technicians could finally rely on."'
+        },
+        images: []
+      }
+    },
+    {
+      id: 3,
       title: 'Vehicle Routing Optimization System',
       category: 'Product Strategy',
       description: 'Designed and launched an enterprise routing platform that increased field efficiency by 33% and saved $2M annually through intelligent scheduling algorithms and real-time optimization.',
@@ -283,7 +381,7 @@ export const portfolioData = {
       caseStudyUrl: null
     },
     {
-      id: 2,
+      id: 4,
       title: 'Vehicle Routing Optimization System',
       category: 'Platform Development',
       description: 'Built requirements and coordinated development for an automated scheduling system that reduced manual route building time by 80% and projected $2.6M in operational savings.',
@@ -296,7 +394,7 @@ export const portfolioData = {
       caseStudyUrl: null
     },
     {
-      id: 3,
+      id: 5,
       title: 'Geo-Based Scheduling Platform',
       category: 'UX Enhancement',
       description: 'Led cross-functional teams to redesign core product features, increasing user efficiency by 10-15% and improving overall product satisfaction scores.',
@@ -309,7 +407,7 @@ export const portfolioData = {
       caseStudyUrl: null
     },
     {
-      id: 4,
+      id: 6,
       title: 'Enterprise Feature Redesign',
       category: 'Design Systems',
       description: 'Created high-fidelity prototypes for multiple client products, achieving 98% user satisfaction through iterative testing and design validation.',
