@@ -1,16 +1,8 @@
 import { motion } from 'framer-motion'
-import { FiCode, FiAward, FiUsers, FiZap } from 'react-icons/fi'
 import { portfolioData } from '../data/portfolioData'
 
 const About = () => {
   const { about } = portfolioData
-
-  const iconMap = {
-    Code: FiCode,
-    Award: FiAward,
-    Users: FiUsers,
-    Lightbulb: FiZap
-  }
 
   const fadeIn = {
     hidden: { opacity: 0, y: 50 },
@@ -35,15 +27,15 @@ const About = () => {
         </motion.h2>
 
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
-          {/* Image and Highlights */}
+          {/* Image and LinkedIn QR */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn}
-            className="flex-shrink-0 space-y-6"
+            className="flex flex-col flex-shrink-0 space-y-6 items-center justify-center"
           >
-            <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-200 dark:ring-primary-800 mx-auto md:mx-0">
+            <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-200 dark:ring-primary-800">
               <img 
                 src="/headshot.png" 
                 alt={portfolioData.personal.name}
@@ -51,22 +43,50 @@ const About = () => {
               />
             </div>
 
-            {/* Highlights */}
-            <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto md:mx-0">
-              {about.highlights.map((highlight, index) => {
-                const Icon = iconMap[highlight.icon] || FiCode
-                return (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
-                  >
-                    <Icon className="w-5 h-5 text-primary-600 dark:text-primary-400 flex-shrink-0" />
-                    <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
-                      {highlight.text}
+            {/* LinkedIn QR Code Card - Desktop */}
+            <div className="hidden md:block max-w-sm w-fit">
+              <div className="bg-gradient-to-br from-[#0077B5] to-[#005885] rounded-3xl p-5 space-y-5 shadow-xl">
+                {/* QR Code */}
+                <div className="bg-transparent rounded-2xl flex items-center justify-center">
+                  <img 
+                    src="/linkedin-qr-code.svg" 
+                    alt="LinkedIn QR Code"
+                    className="w-full h-auto max-w-[220px]"
+                  />
+                </div>
+                
+                {/* LinkedIn Button */}
+                <a
+                  href={portfolioData.personal.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-white hover:bg-gray-50 transition-colors rounded-full py-3 px-3 text-center"
+                >
+                  <span className="text-[#0077B5] font-semibold flex items-center justify-center gap-1">
+                    Linked
+                    <span className="inline-flex items-center justify-center w-5 h-5 bg-[#0077B5] text-white text-xs font-bold rounded">
+                      in
                     </span>
-                  </div>
-                )
-              })}
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            {/* LinkedIn Button - Mobile */}
+            <div className="md:hidden w-full max-w-xs">
+              <a
+                href={portfolioData.personal.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-gradient-to-br from-[#0077B5] to-[#005885] hover:from-[#005885] hover:to-[#004266] transition-all rounded-full py-4 px-8 text-center shadow-lg"
+              >
+                <span className="text-white font-semibold flex items-center justify-center gap-2 text-lg">
+                  Linked
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-white text-[#0077B5] text-sm font-bold rounded">
+                    in
+                  </span>
+                </span>
+              </a>
             </div>
           </motion.div>
 

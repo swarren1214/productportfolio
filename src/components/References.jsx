@@ -57,55 +57,58 @@ const References = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-600"
+              className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-600 flex flex-col"
             >
-              {/* Header */}
-              <div className="mb-4">
-                <div className="flex items-center gap-3 mb-2">
-                  {reference.image ? (
-                    <img 
-                      src={reference.image} 
-                      alt={reference.name}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-purple-500"
-                    />
-                  ) : (
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl">
-                      {reference.name.split(' ').map(n => n[0]).join('')}
+              {/* Content wrapper */}
+              <div className="flex-grow">
+                {/* Header */}
+                <div className="mb-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    {reference.image ? (
+                      <img 
+                        src={reference.image} 
+                        alt={reference.name}
+                        className="w-12 h-12 rounded-full object-cover border-2 border-purple-500"
+                      />
+                    ) : (
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl">
+                        {reference.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {reference.name}
+                      </h3>
                     </div>
-                  )}
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                      {reference.name}
-                    </h3>
+                  </div>
+                  
+                  {/* Title */}
+                  <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-2">
+                    <FiBriefcase className="flex-shrink-0" />
+                    <span className="italic">{reference.title}</span>
+                  </div>
+
+                  {/* Phone */}
+                  <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                    <FiPhone className="flex-shrink-0" />
+                    <a 
+                      href={`tel:${reference.phone.replace(/\./g, '')}`}
+                      className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                    >
+                      {reference.phone}
+                    </a>
                   </div>
                 </div>
-                
-                {/* Title */}
-                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-2">
-                  <FiBriefcase className="flex-shrink-0" />
-                  <span className="italic">{reference.title}</span>
-                </div>
 
-                {/* Phone */}
-                <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
-                  <FiPhone className="flex-shrink-0" />
-                  <a 
-                    href={`tel:${reference.phone.replace(/\./g, '')}`}
-                    className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                  >
-                    {reference.phone}
-                  </a>
+                {/* Testimonial */}
+                <div className="pt-4 border-t border-gray-300 dark:border-gray-600">
+                  <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed italic">
+                    "{reference.testimonial}"
+                  </p>
                 </div>
               </div>
 
-              {/* Testimonial */}
-              <div className="pt-4 border-t border-gray-300 dark:border-gray-600">
-                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed italic">
-                  "{reference.testimonial}"
-                </p>
-              </div>
-
-              {/* LinkedIn Button */}
+              {/* LinkedIn Button - Always at bottom */}
               {reference.linkedin && (
                 <div className="mt-4">
                   <a

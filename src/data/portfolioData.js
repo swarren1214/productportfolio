@@ -60,7 +60,11 @@ export const portfolioData = {
       { icon: 'Users', text: 'User Research' },
       { icon: 'Code', text: 'Data Analysis' },
       { icon: 'Lightbulb', text: 'Product Design' },
-      { icon: 'Award', text: 'UX Strategy' }
+      { icon: 'Award', text: 'UX Strategy' },
+      { icon: 'Code', text: 'Agile/Scrum' },
+      { icon: 'Award', text: 'Data Dashboards' },
+      { icon: 'Users', text: 'Leadership' },
+      { icon: 'Lightbulb', text: 'Strategy Planning' }
     ]
   },
 
