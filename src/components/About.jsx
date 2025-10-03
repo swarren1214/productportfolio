@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { FaLinkedin } from 'react-icons/fa'
 import { portfolioData } from '../data/portfolioData'
 
 const About = () => {
@@ -62,11 +63,9 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="block w-full bg-white hover:bg-gray-50 transition-colors rounded-full py-3 px-3 text-center"
                 >
-                  <span className="text-[#0077B5] font-semibold flex items-center justify-center gap-1">
-                    Linked
-                    <span className="inline-flex items-center justify-center w-5 h-5 bg-[#0077B5] text-white text-xs font-bold rounded">
-                      in
-                    </span>
+                  <span className="text-[#0077B5] font-semibold flex items-center justify-center gap-2">
+                    <FaLinkedin className="text-xl" />
+                    <span>View Profile</span>
                   </span>
                 </a>
               </div>
@@ -78,13 +77,11 @@ const About = () => {
                 href={portfolioData.personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-gradient-to-br from-[#0077B5] to-[#005885] hover:from-[#005885] hover:to-[#004266] transition-all rounded-full py-4 px-8 text-center shadow-lg"
+                className="block w-full bg-gradient-to-br from-[#0077B5] to-[#005885] hover:from-[#005885] hover:to-[#004266] transition-all rounded-lg py-4 px-8 text-center shadow-lg"
               >
                 <span className="text-white font-semibold flex items-center justify-center gap-2 text-lg">
-                  Linked
-                  <span className="inline-flex items-center justify-center w-6 h-6 bg-white text-[#0077B5] text-sm font-bold rounded">
-                    in
-                  </span>
+                  <FaLinkedin className="text-xl" />
+                  <span>View LinkedIn Profile</span>
                 </span>
               </a>
             </div>

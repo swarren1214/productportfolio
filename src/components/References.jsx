@@ -102,8 +102,8 @@ const References = () => {
 
                 {/* Testimonial */}
                 <div className="pt-4 border-t border-gray-300 dark:border-gray-600">
-                  <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed italic">
-                    "{reference.testimonial}"
+                  <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    {reference.testimonial}
                   </p>
                 </div>
               </div>

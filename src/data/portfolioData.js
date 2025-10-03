@@ -23,7 +23,7 @@ export const portfolioData = {
     sections: [
       {
         heading: 'Product Leadership',
-        content: 'I\'m a Product Manager passionate about building platforms that transform complex operations into intuitive, scalable solutions. My work blends innovation, user-centered design, and strategic execution to deliver measurable business impact.'
+        content: 'As a Product Manager, I\'m passionate about building platforms that transform complex operations into intuitive, scalable solutions. My work blends innovation, user-centered design, and strategic execution to deliver measurable business impact.'
       },
       {
         heading: 'Recent Accomplishments at Aptive',
@@ -52,7 +52,7 @@ export const portfolioData = {
       },
       {
         heading: 'Product Philosophy',
-        content: 'Grounded in a background in UX/UI design, I believe every product decision should be informed by empathy, data, and measurable outcomes. My focus is making complex workflows simple—helping users and businesses achieve more with less friction.'
+        content: 'Grounded with a background in UX/UI design, I believe every product decision should be informed by empathy, data, and measurable outcomes. My focus is making complex workflows simple—helping users and businesses achieve more with less friction.'
       }
     ],
     image: '/headshot.png',
