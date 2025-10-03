@@ -541,6 +541,14 @@ export const portfolioData = {
       image: '/grady-kelly.png'
     },
     {
+      name: 'Neal Thacker',
+      phone: '404.434.0817',
+      title: 'Engineering Manager at Aptive',
+      testimonial: 'Neal and I worked in tandem at Aptive both on ARO as well as Project Cleo (the new microservices platform). Together we built and shipped many features and innovative solutions that empowered and transformed Aptive.',
+      linkedin: 'https://www.linkedin.com/in/neal-thacker-b5745192/',
+      image: '/neal-thacker.png'
+    },
+    {
       name: 'Michael Thurman',
       phone: '801.921.1580',
       title: 'Software Product Manager at Awardco',
@@ -548,12 +556,5 @@ export const portfolioData = {
       linkedin: 'https://www.linkedin.com/in/michael-thurman/',
       image: '/michael-thurman.png'
     },
-    {
-      name: 'Mike Thompson',
-      phone: '801.709.9014',
-      title: 'Director of Program Management at Legrand NA',
-      testimonial: 'Mike Thompson was a great resource and mentor for me during my time at Legrand. His experience in the software industry is extremely impressive and I learned a lot from working on his team.',
-      linkedin: 'https://www.linkedin.com/in/mike-thompson-2553754/'
-    }
   ]
 }
