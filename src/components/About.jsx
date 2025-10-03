@@ -34,7 +34,7 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn}
-            className="flex flex-col flex-shrink-0 space-y-6 items-center justify-center"
+            className="flex flex-col flex-shrink-0 space-y-10 items-center justify-center"
           >
             <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-200 dark:ring-primary-800">
               <img 
