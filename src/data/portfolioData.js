@@ -639,7 +639,7 @@ export const portfolioData = {
     {
       name: 'Grady Kelly',
       phone: '801.913.7024',
-      title: 'Director of Product Design at Aptive',
+      title: 'Director of Design at Aptive',
       testimonial: 'Grady and I worked closely together on many projects at Aptive. He was my designer for a time on our routing UI, and he also has been a great resource for me to prove out ideas.',
       linkedin: 'https://www.linkedin.com/in/grady/',
       image: '/grady-kelly.png'
@@ -655,7 +655,7 @@ export const portfolioData = {
     {
       name: 'Michael Thurman',
       phone: '801.921.1580',
-      title: 'Software Product Manager at Awardco',
+      title: 'Product Manager at Awardco',
       testimonial: 'Michael Thurman and I have worked closely together at Legrand as he was one of the PMs on the team prior to joining the team at Awardco. He was also in the MBA program with me at Utah Valley University.',
       linkedin: 'https://www.linkedin.com/in/michael-thurman/',
       image: '/michael-thurman.png'
