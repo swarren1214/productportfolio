@@ -177,7 +177,7 @@ export const portfolioData = {
         icon: 'FaMapMarkerAlt'
       }
     ],
-    resumeUrl: '/Resume.pdf'
+    resumeUrl: '/resume.pdf'
   },
 
   // Education Section
