@@ -622,7 +622,7 @@ export const portfolioData = {
     },
     {
       name: 'Josh Rich',
-      phone: '801.823.1863',
+      phone: '801.310.1205',
       title: 'Product Manager at Aptive',
       testimonial: 'Josh is a talented Product Manager at Aptive with substantial experience in the field. He and I have become well acquainted and we have mutual admiration for each other\'s skills and strengths.',
       linkedin: 'https://www.linkedin.com/in/joshua-rich-86b3b117a/',
