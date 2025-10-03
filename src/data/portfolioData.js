@@ -339,7 +339,7 @@ export const portfolioData = {
       image: '/deli-dash-cover.png',
       metrics: [
         { value: '18mo', label: 'Development Time' },
-        { value: '100s+', label: 'Downloads' }
+        { value: '2,000k+', label: 'Downloads' }
       ],
       tags: ['Product Design', 'UX Design', 'User Testing', 'Mobile'],
       caseStudy: {
@@ -546,7 +546,7 @@ export const portfolioData = {
       image: '/aro-cover.png',
       metrics: [
         { value: '33%', label: 'Efficiency Gain' },
-        { value: '2.0', label: 'Appts/Gallon' }
+        { value: '1.5 → 2.0', label: 'Appts/Gallon' }
       ],
       tags: ['Product Management', 'User Research', 'Data Analysis', 'Enterprise'],
       caseStudy: {
