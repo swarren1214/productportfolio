@@ -61,7 +61,7 @@ const About = () => {
                   href={portfolioData.personal.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-white hover:bg-gray-50 transition-colors rounded-full py-3 px-3 text-center"
+                  className="block w-full bg-white hover:bg-gray-50 transition-colors rounded-xl py-3 px-3 text-center"
                 >
                   <span className="text-[#0077B5] font-semibold flex items-center justify-center gap-2">
                     <FaLinkedin className="text-xl" />
@@ -77,7 +77,7 @@ const About = () => {
                 href={portfolioData.personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-gradient-to-br from-[#0077B5] to-[#005885] hover:from-[#005885] hover:to-[#004266] transition-all rounded-lg py-4 px-8 text-center shadow-lg"
+                className="block w-full bg-gradient-to-br from-[#0077B5] to-[#005885] hover:from-[#005885] hover:to-[#004266] transition-all rounded-xl py-3 px-3 text-center shadow-lg"
               >
                 <span className="text-white font-semibold flex items-center justify-center gap-2 text-lg">
                   <FaLinkedin className="text-xl" />
