@@ -205,6 +205,110 @@ export const portfolioData = {
   // Portfolio & Case Studies Section
   portfolio: [
     {
+      id: 4,
+      title: 'Project Cleo',
+      category: 'Enterprise Platform Development',
+      description: 'Led Field Ops and Licensing development within Aptive\'s next-generation multi-tenant platform, leveraging AI acceleration while championing user-centered design to deliver enterprise-scale solutions in under 12 months.',
+      image: '/aptive_logo.png',
+      metrics: [
+        { value: '<12mo', label: 'Delivery Time' },
+        { value: '$2M+', label: 'Annual Savings' }
+      ],
+      tags: ['Product Management', 'AI Development', 'UX Research', 'Enterprise Architecture'],
+      caseStudy: {
+        title: '💡 Project Cleo: Accelerating Enterprise Platform Development with AI',
+        overview: 'Project Cleo is the codename for Aptive Environmental\'s next-generation, multi-tenant enterprise platform designed to unify every core business function — from customer acquisition to service delivery.\n\nThe platform includes a suite of interconnected applications:\n• CRM – Customer management and contract visibility\n• Sales – Lead tracking and conversion\n• Field Ops – Scheduling, routing, and service execution\n• Licensing – Regulatory compliance and credential management\n• Pay – Compensation processing for sales and service teams\n• Comms – Customer communication and notifications\n• Admin – Permissions, user management, and access control\n• Roadmap – Internal product planning and release tracking\n• Onboarding & Housing – Seasonal employee housing and readiness tracking\n\nThe system also integrates with external enterprise platforms like Workday, Genesys, Motive, and FusionAuth, creating a unified operating environment across all departments.\n\nThe goal: build an enterprise platform capable of managing thousands of users and tens of thousands of daily service appointments — in under a year.',
+        role: {
+          title: '⚙️ My Role',
+          description: 'As Product Manager for Field Ops and Licensing, I oversaw the design, development, and integration of two mission-critical applications within Cleo, while collaborating closely with other product teams to ensure seamless end-to-end functionality across the entire ecosystem.\n\nKey responsibilities and contributions:',
+          responsibilities: [
+            'Defined product strategy, requirements, and cross-app dependencies for Field Ops and Licensing.',
+            'Facilitated end-to-end integration testing across all applications to validate data flow, authentication, and user experience continuity.',
+            'Partnered with engineering to define architecture and ensure consistent design patterns across modules.',
+            'Personally contributed over 10,000 lines of production code, applying vibe coding principles to create shared UI components and maintain a cohesive experience across apps.'
+          ]
+        },
+        challenge: {
+          title: '🤖 The Role of AI in Development',
+          description: 'AI became a key force multiplier during Project Cleo\'s compressed delivery timeline. Large Language Models were used to:',
+          points: [
+            'Generate test scaffolding for unit, integration, and API tests.',
+            'Automate technical documentation for engineers and internal stakeholders.',
+            'Refactor boilerplate code and accelerate integration with third-party systems (VROOM, Workday, Genesys, Motive, and others).'
+          ],
+          footer: 'These efficiencies freed the team to focus on the business-critical logic that drives Aptive\'s operations — including scheduling, regulatory compliance, and performance tracking.\n\n"AI made us faster, but not wiser. It could write code, but it couldn\'t design clarity."'
+        },
+        discovery: {
+          title: '🧠 The Early Tradeoff: Speed Over Design',
+          description: 'At the outset, the team prioritized rapid delivery over user experience. The goal was to get the platform running — fast. As a result, UX research and design were intentionally deferred to later phases.\n\nThis decision quickly exposed a major gap:',
+          points: [
+            'Interfaces felt inconsistent across modules.',
+            'Workflows required insider knowledge to navigate.',
+            'Teams experienced frustration and rework as usability issues surfaced in testing and production.'
+          ],
+          footer: 'AI had proven invaluable for accelerating code, but it was terrible at understanding human behavior. It couldn\'t anticipate user intent, workflow complexity, or accessibility — all crucial to enterprise adoption.\n\nWith a background in UX, I became a strong advocate for a course correction. I championed the idea that research should inform architecture, not just decorate it. We needed to design around how people actually worked — not how fast the system could be assembled.'
+        },
+        design: {
+          title: '🧭 Course Correction: Building for Humans',
+          description: 'In later phases, we reintroduced user research and UX design as foundational components of the development process:',
+          points: [
+            'Field Observations: Ride-alongs and interviews revealed friction in how technicians logged services and tracked routes.',
+            'Workflow Mapping: Dispatchers and managers co-created visual dashboards to simplify complex routing and scheduling tasks.',
+            'Licensing Redesign: Compliance workflows were rebuilt to support expiration tracking, jurisdictional visibility, and easy document uploads.',
+            'Unified Design System: I helped implement a component-based library to enforce visual and interaction consistency across every Cleo module.'
+          ],
+          footer: 'This pivot restored balance between speed and usability, and transformed the platform from "functional" to intuitive and scalable.'
+        },
+        launch: {
+          title: '🚀 Results',
+          description: 'By combining AI acceleration with renewed focus on design and product strategy, Project Cleo achieved:',
+          metrics: [
+            'A Field Ops system capable of real-time scheduling, routing, and service management.',
+            'A Licensing platform ensuring compliance across 50 states, reducing audit risk and administrative overhead.',
+            'Full integration across CRM, Pay, Comms, and Admin — enabling unified workflows and cross-team visibility.',
+            'A cohesive UI and UX powered by reusable design components and cross-app consistency.',
+            '$2M+ in projected annual savings from routing optimization and operational efficiency.',
+            'Completion within twelve months, setting a new internal benchmark for enterprise delivery.'
+          ]
+        },
+        lessons: {
+          title: '💬 Lessons Learned',
+          items: [
+            {
+              number: '1',
+              title: 'AI can code, but it can\'t empathize.',
+              description: 'Speed means nothing if users can\'t use what you\'ve built.'
+            },
+            {
+              number: '2',
+              title: 'Research must inform architecture.',
+              description: 'Good UX isn\'t decoration — it\'s structural.'
+            },
+            {
+              number: '3',
+              title: 'Integration is the true measure of enterprise success.',
+              description: 'A platform is only as strong as the handoffs between its apps.'
+            },
+            {
+              number: '4',
+              title: 'Hands-on product management creates alignment.',
+              description: 'Writing code and testing integrations firsthand built credibility and cohesion across teams.'
+            }
+          ]
+        },
+        outcome: {
+          title: '🎯 Takeaway',
+          description: 'Project Cleo proved that AI-driven acceleration can dramatically shorten the development timeline — but it also underscored the irreplaceable role of human-centered design and product intuition.'
+        },
+        takeaway: {
+          title: '',
+          description: '',
+          quote: '"AI built it fast. We made it right."'
+        },
+        images: []
+      }
+    },
+    {
       id: 1,
       title: 'Deli Dash',
       category: 'Mobile Game Development',
