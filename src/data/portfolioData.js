@@ -177,7 +177,7 @@ export const portfolioData = {
         icon: 'FaMapMarkerAlt'
       }
     ],
-    resumeUrl: '/resume.pdf'
+    resumeUrl: '/Resume.pdf'
   },
 
   // Education Section
@@ -205,7 +205,7 @@ export const portfolioData = {
   // Portfolio & Case Studies Section
   portfolio: [
     {
-      id: 4,
+      id: 1,
       title: 'Project Cleo',
       category: 'Enterprise Platform Development',
       description: 'Led Field Ops and Licensing development within Aptive\'s next-generation multi-tenant platform, leveraging AI acceleration while championing user-centered design to deliver enterprise-scale solutions in under 12 months.',
@@ -309,7 +309,7 @@ export const portfolioData = {
       }
     },
     {
-      id: 1,
+      id: 4,
       title: 'Deli Dash',
       category: 'Mobile Game Development',
       description: 'Built a fast-paced mobile game from scratch over 18 months, leading product design and UX while learning critical lessons about product-market fit and iteration speed.',
@@ -412,7 +412,7 @@ export const portfolioData = {
       }
     },
     {
-      id: 2,
+      id: 3,
       title: 'DLM Config',
       category: 'Commercial Lighting Control',
       description: 'Redesigned Legrand\'s mobile configuration app for commercial lighting systems, reducing setup time by 50% and transforming field technician productivity through stabilization and UX innovation.',
@@ -516,7 +516,7 @@ export const portfolioData = {
       }
     },
     {
-      id: 3,
+      id: 2,
       title: 'ARO (Aptive Routing Optimization)',
       category: 'Routing & Scheduling Intelligence',
       description: 'Led product management for Aptive\'s routing engine, increasing appointments per gallon from 1.5 to 2.0 and achieving 33% efficiency gains through research-driven optimization and systems thinking.',
