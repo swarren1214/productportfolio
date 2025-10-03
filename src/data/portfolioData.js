@@ -259,6 +259,29 @@ export const portfolioData = {
           ],
           footer: 'This pivot restored balance between speed and usability, and transformed the platform from "functional" to intuitive and scalable.'
         },
+        algorithms: {
+          title: '🧮 Intelligent Scheduling Algorithms',
+          description: 'To optimize Field Ops performance, I personally developed two proprietary algorithms that transformed how Aptive schedules and manages service appointments:',
+          points: [
+            'Geo-Scheduling Algorithm: Intelligently assigns appointments based on geographic proximity, technician skills, and route efficiency — reducing drive time and maximizing daily capacity.',
+            'Zone Coverage Algorithm: Accurately calculates service capacity and demand within geographic zones, enabling smarter scheduling decisions and balanced workload distribution.'
+          ],
+          footer: 'These algorithms increased route efficiency by 15-20% and enabled data-driven capacity planning across thousands of daily appointments.',
+          documents: [
+            {
+              title: 'Geo-Scheduling Algorithm',
+              description: 'Detailed documentation of the algorithm that optimizes appointment scheduling based on geographic clustering and route efficiency.',
+              url: '/geo-scheduling-algorithm.pdf',
+              filename: 'geo-scheduling-algorithm.pdf'
+            },
+            {
+              title: 'Zone Coverage Algorithm',
+              description: 'Technical specification for calculating service capacity and demand within geographic zones for intelligent scheduling.',
+              url: '/zone-coverage-algorithm.pdf',
+              filename: 'zone-coverage-algorithm.pdf'
+            }
+          ]
+        },
         launch: {
           title: '🚀 Results',
           description: 'By combining AI acceleration with renewed focus on design and product strategy, Project Cleo achieved:',

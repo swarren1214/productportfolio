@@ -295,6 +295,126 @@ const Portfolio = () => {
                     </div>
                   )}
 
+                  {/* Discovery Section */}
+                  {selectedProject.caseStudy.discovery && (
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        {selectedProject.caseStudy.discovery.title}
+                      </h3>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        {selectedProject.caseStudy.discovery.description}
+                      </p>
+                      <ul className="space-y-2 ml-4">
+                        {selectedProject.caseStudy.discovery.points.map((point, idx) => (
+                          <li key={idx} className="text-gray-700 dark:text-gray-300 flex items-start gap-2">
+                            <span className="text-purple-600 dark:text-purple-400 mt-1">•</span>
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {selectedProject.caseStudy.discovery.footer && (
+                        <p className="text-gray-700 dark:text-gray-300 italic mt-4 whitespace-pre-line">
+                          {selectedProject.caseStudy.discovery.footer}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Design Section */}
+                  {selectedProject.caseStudy.design && (
+                    <div className="space-y-4 p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 rounded-xl">
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        {selectedProject.caseStudy.design.title}
+                      </h3>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        {selectedProject.caseStudy.design.description}
+                      </p>
+                      <ul className="space-y-2 ml-4">
+                        {selectedProject.caseStudy.design.points.map((point, idx) => (
+                          <li key={idx} className="text-gray-700 dark:text-gray-300 flex items-start gap-2">
+                            <span className="text-purple-600 dark:text-purple-400 mt-1">•</span>
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {selectedProject.caseStudy.design.footer && (
+                        <p className="text-gray-700 dark:text-gray-300 italic mt-4">
+                          {selectedProject.caseStudy.design.footer}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Algorithms Section with Documents */}
+                  {selectedProject.caseStudy.algorithms && (
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        {selectedProject.caseStudy.algorithms.title}
+                      </h3>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        {selectedProject.caseStudy.algorithms.description}
+                      </p>
+                      <ul className="space-y-2 ml-4">
+                        {selectedProject.caseStudy.algorithms.points.map((point, idx) => (
+                          <li key={idx} className="text-gray-700 dark:text-gray-300 flex items-start gap-2">
+                            <span className="text-purple-600 dark:text-purple-400 mt-1">•</span>
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {selectedProject.caseStudy.algorithms.footer && (
+                        <p className="text-gray-700 dark:text-gray-300 italic mt-4">
+                          {selectedProject.caseStudy.algorithms.footer}
+                        </p>
+                      )}
+                      
+                      {/* Algorithm Documents */}
+                      {selectedProject.caseStudy.algorithms.documents && selectedProject.caseStudy.algorithms.documents.length > 0 && (
+                        <div className="mt-6 grid md:grid-cols-2 gap-4">
+                          {selectedProject.caseStudy.algorithms.documents.map((doc, idx) => (
+                            <div key={idx} className="p-6 bg-white dark:bg-gray-800 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all shadow-lg">
+                              <div className="flex items-start gap-4">
+                                <div className="flex-shrink-0 w-12 h-12 bg-gradient-logo rounded-lg flex items-center justify-center">
+                                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                  </svg>
+                                </div>
+                                <div className="flex-1 space-y-2">
+                                  <h4 className="font-bold text-gray-900 dark:text-white">{doc.title}</h4>
+                                  <p className="text-sm text-gray-600 dark:text-gray-400">{doc.description}</p>
+                                  <div className="flex gap-2 pt-2">
+                                    <a
+                                      href={doc.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-semibold transition-colors"
+                                    >
+                                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                      </svg>
+                                      View PDF
+                                    </a>
+                                    <a
+                                      href={doc.url}
+                                      download={doc.filename}
+                                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-lg text-sm font-semibold transition-colors"
+                                    >
+                                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                      </svg>
+                                      Download
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
                   {/* Video Section */}
                   {selectedProject.caseStudy.video && (
                     <div className="space-y-4">
