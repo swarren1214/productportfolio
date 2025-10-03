@@ -218,6 +218,25 @@ const Portfolio = () => {
                         {selectedProject.caseStudy.overview}
                       </p>
                     </div>
+
+                    {/* App Store Button */}
+                    {selectedProject.caseStudy.appStoreUrl && (
+                      <div className="flex justify-center mt-6">
+                        <a
+                          href={selectedProject.caseStudy.appStoreUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block transition-transform hover:scale-105 select-none"
+                        >
+                          <img
+                            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="Download on the App Store"
+                            className="h-12 md:h-14 select-none pointer-events-none"
+                            draggable="false"
+                          />
+                        </a>
+                      </div>
+                    )}
                   </div>
 
                   {/* My Role Section */}

@@ -345,6 +345,7 @@ export const portfolioData = {
       caseStudy: {
         title: '🎮 Deli Dash: Building a Fast-Paced Mobile Game from Scratch',
         overview: 'Deli Dash is a fast-paced mobile game where players race against time to assemble sandwiches by tapping ingredient buttons in the correct sequence. What began as a fun side project between two friends evolved into a full-fledged mobile game with a dedicated fanbase and competitive leaderboard culture.\n\nOver 18 months, we built and launched the game from the ground up — my friend focusing on the engineering and backend architecture, while I led product design, user experience, and gameplay mechanics. Despite being a passion project, Deli Dash taught us valuable lessons about product-market fit, iteration speed, and the importance of getting real user feedback early.',
+        appStoreUrl: 'https://apps.apple.com/us/app/deli-dash/id1533511215',
         role: {
           title: '💡 My Role',
           description: 'I served as Product Manager and UX Designer, responsible for:',
