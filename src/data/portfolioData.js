@@ -209,10 +209,10 @@ export const portfolioData = {
       title: 'Project Cleo',
       category: 'Enterprise Platform Development',
       description: 'Led Field Ops and Licensing development within Aptive\'s next-generation multi-tenant platform, leveraging AI acceleration while championing user-centered design to deliver enterprise-scale solutions in under 12 months.',
-      image: '/aptive_logo.png',
+      image: '/project-cleo-cover.png',
       metrics: [
         { value: '<12mo', label: 'Delivery Time' },
-        { value: '$2M+', label: 'Annual Savings' }
+        { value: '$500M+', label: 'Projected Growth' }
       ],
       tags: ['Product Management', 'AI Development', 'UX Research', 'Enterprise Architecture'],
       caseStudy: {

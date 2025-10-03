@@ -37,17 +37,6 @@ const Contact = () => {
             {contact.subtitle}
           </p>
 
-          {/* Email */}
-          <div className="mb-8">
-            <a
-              href={`mailto:${contact.email}`}
-              className="inline-flex items-center gap-3 text-2xl font-semibold text-primary-600 dark:text-primary-400 hover:underline"
-            >
-              <FiMail />
-              {contact.email}
-            </a>
-          </div>
-
           {/* Social Links */}
           <div className="flex justify-center gap-6 mb-12">
             {contact.socialLinks.map((link, index) => {
@@ -73,7 +62,7 @@ const Contact = () => {
             <a
               href={contact.resumeUrl}
               download
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl"
             >
               <FiDownload className="w-5 h-5" />
               Download Resume

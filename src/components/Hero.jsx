@@ -133,11 +133,11 @@ const Hero = () => {
               <a
                 key={index}
                 href={button.href}
-                className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
+                className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-white ${
                   button.variant === 'outline'
-                    ? 'border-2 border-white text-white hover:bg-white hover:text-indigo-600'
-                    : 'bg-white text-indigo-600 hover:bg-indigo-50 hover:shadow-lg'
-                }`}
+                    ? 'bg-secondary-600 border border-white hover:bg-secondary-800'
+                    : 'bg-primary-600 hover:bg-primary-800'
+                } hover:shadow-lg`}
               >
                 {button.text}
                 <FiArrowRight />

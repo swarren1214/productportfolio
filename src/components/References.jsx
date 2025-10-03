@@ -63,40 +63,40 @@ const References = () => {
               <div className="flex-grow">
                 {/* Header */}
                 <div className="mb-4">
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex items-start gap-4 mb-4">
                     {reference.image ? (
                       <img 
                         src={reference.image} 
                         alt={reference.name}
-                        className="w-12 h-12 rounded-full object-cover border-2 border-purple-500"
+                        className="w-20 h-20 rounded-full object-cover border-2 border-purple-500 flex-shrink-0"
                       />
                     ) : (
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
                         {reference.name.split(' ').map(n => n[0]).join('')}
                       </div>
                     )}
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                         {reference.name}
                       </h3>
-                    </div>
-                  </div>
-                  
-                  {/* Title */}
-                  <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-2">
-                    <FiBriefcase className="flex-shrink-0" />
-                    <span className="italic">{reference.title}</span>
-                  </div>
+                      
+                      {/* Title */}
+                      <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-2">
+                        <FiBriefcase className="flex-shrink-0" />
+                        <span className="italic">{reference.title}</span>
+                      </div>
 
-                  {/* Phone */}
-                  <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
-                    <FiPhone className="flex-shrink-0" />
-                    <a 
-                      href={`tel:${reference.phone.replace(/\./g, '')}`}
-                      className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                    >
-                      {reference.phone}
-                    </a>
+                      {/* Phone */}
+                      <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                        <FiPhone className="flex-shrink-0" />
+                        <a 
+                          href={`tel:${reference.phone.replace(/\./g, '')}`}
+                          className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                        >
+                          {reference.phone}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
