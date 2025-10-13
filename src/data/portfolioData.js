@@ -638,7 +638,7 @@ export const portfolioData = {
       name: 'Khuyen Bui',
       phone: '206.300.5190',
       title: 'VP of Engineering at Aptive',
-      testimonial: 'Khuyen is a very analytical and ROI driven leader. He and I would talk regularly about my product and what KPIs were being measured for success on my product. He has been an invaluable resource for me and an advocate for my career.',
+      testimonial: 'Khuyen is a very analytical and ROI driven leader. He and I would talk regularly about my product and what KPIs were being measured for success. He has been an invaluable resource for me and an advocate for my career.',
       linkedin: 'https://www.linkedin.com/in/khuyenbui/',
       image: '/khuyen-bui.png'
     },
