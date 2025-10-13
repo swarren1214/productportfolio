@@ -104,14 +104,12 @@ export const portfolioData = {
       period: '08/2023 - Present',
       logo: '/aptive_logo.png',
       achievements: [
-        'Led the development of an in-house vehicle routing software, improving average appointments per gallon from 1.5 to 2.0.',
-        'Identified a critical gap in the software development lifecycle by advocating for a dedicated UI for the routing and scheduling component.',
-        'Designed and launched an intuitive user interface for operations leaders to track routes, schedule appointments, and manage employee shifts, achieving a $2M annual cost savings.',
-        'Created custom algorithms to predict appointment durations based on factors like property size, optimizing scheduling efficiency.',
-        'Developed a licensing platform to enforce compliance with licensing restrictions for sales and service representatives.',
-        'Built analytics dashboards to monitor routing software performance and identify trends impacting key performance indicators.',
-        'Established a backend system for tracking route changes made by the routing engine, enabling quicker resolution of field-reported issues.',
-        'Defined requirements for a "Geo Scheduling" platform to automate route building, resulting in an estimated $2.6M in annual savings.'
+        'Directed development of the Field Ops and Licensing modules within Project Cleo, Aptive\'s AI-accelerated enterprise platform unifying CRM, Sales, Operations, and Compliance.',
+        'Leveraged AI across the SDLC to generate code, automate testing, and document APIs — cutting delivery timelines by 40% and enabling deployment in under 12 months.',
+        'Defined product vision and architecture for intelligent scheduling and licensing systems that automated routing, credential enforcement, and workforce planning across 3.5M+ annual appointments.',
+        'Championed user-centered design, integrating field research and usability testing to drive adoption and streamline workflows for thousands of technicians and managers.',
+        'Established shared design systems and reusable components, ensuring cross-app consistency and faster feature delivery.',
+        'Delivered $4.5M+ in projected annual savings through automation, workflow optimization, and AI-driven execution.'
       ],
       featured: true
     },
@@ -123,12 +121,12 @@ export const portfolioData = {
       period: '05/2021 - 08/2023',
       logo: '/legrand_logo.png',
       achievements: [
-        'Operated multiple teams of engineers to effectively plan and coordinate team sprints and execute key product deliverables.',
-        'Oversaw the implementation of agile methodology to complete team sprints and deliver planned product increments on time.',
-        'Drafted, reviewed, and revised necessary project documentation (i.e., PRD, EPS, and MOU) and distributed documents for approvals.',
-        'Initiated effort to utilize existing DevOps software features to provide clarity and organization for timelines, increasing overall efficiency.',
-        'Suggested and led effort to improve product management communication and feedback loops between departments.',
-        'Redesigned product features to enhance usability, increasing user efficiency and output by 10-15%.'
+        'Redesigned Legrand\'s DLM Config mobile app, cutting setup time by 50% and improving field technician efficiency through simplified workflows and UX innovation.',
+        'Led cross-functional development across mobile, desktop, and web apps, aligning strategy and execution across the full DLM product ecosystem.',
+        'Applied user research and field testing to uncover key friction points, transforming complex calibration workflows into intuitive, reliable experiences.',
+        'Stabilized a legacy Xamarin codebase, reducing crashes and restoring trust among field users and sales engineers.',
+        'Implemented agile processes and improved DevOps visibility, enhancing delivery predictability and cross-team communication.',
+        'Presented product improvements at Legrand\'s annual sales conference, driving adoption and unifying design patterns across platforms.'
       ],
       featured: true
     },
