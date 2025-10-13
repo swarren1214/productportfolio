@@ -58,9 +58,10 @@ const Skills = () => {
               </h3>
               
               <motion.div
+                key={`${category}-container`}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.1, margin: "0px 0px -100px 0px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 variants={staggerContainer}
                 className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
               >
@@ -78,14 +79,15 @@ const Skills = () => {
                   
                   return (
                     <motion.div
-                      key={index}
+                      key={`${category}-${index}`}
                       variants={itemVariants}
                       whileHover={{ scale: 1.05, y: -5 }}
                       onClick={() => setSelectedSkill({ ...skill, category, colorClass })}
-                      className="flex flex-col items-center gap-3 p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer border border-transparent hover:border-purple-300 dark:hover:border-purple-700"
+                      className="flex flex-col items-center gap-3 p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm hover:shadow-xl hover:shadow-purple-500/20 cursor-pointer border border-transparent hover:border-purple-300 dark:hover:border-purple-700"
+                      style={{ willChange: 'auto' }}
                     >
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <IconComponent className={`w-10 h-10 ${colorClass} transition-colors duration-300`} />
+                        <IconComponent className={`w-10 h-10 ${colorClass}`} />
                       </div>
                       <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
                         {skill.name}

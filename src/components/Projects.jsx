@@ -67,7 +67,7 @@ const Projects = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 variants={cardVariants}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 dark:border-gray-700"
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700"
               >
                 <div className="p-6 md:p-8">
                   {/* Header with Logo and Title */}
@@ -124,7 +124,7 @@ const Projects = () => {
 
                     {/* Expand/Collapse Button */}
                     <motion.button
-                      className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                      className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       aria-label={isExpanded ? "Collapse" : "Expand"}
@@ -152,7 +152,7 @@ const Projects = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: idx * 0.05 }}
-                            className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg border border-purple-200 dark:border-purple-700/50 hover:border-purple-400 dark:hover:border-purple-500 transition-colors duration-200"
+                            className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg border border-purple-200 dark:border-purple-700/50 hover:border-purple-400 dark:hover:border-purple-500"
                           >
                             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                               {achievement}

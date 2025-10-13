@@ -68,7 +68,7 @@ const Portfolio = () => {
                   setCarouselIndex(0) // Reset carousel to first image
                 }
               }}
-              className={`bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
+              className={`bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl ${
                 project.caseStudy ? 'cursor-pointer' : ''
               }`}
             >
@@ -78,7 +78,7 @@ const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                     onError={(e) => {
                       e.target.style.display = 'none'
                     }}
