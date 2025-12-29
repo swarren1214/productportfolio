@@ -29,7 +29,7 @@ export const portfolioData = {
         heading: 'Recent Accomplishments at Aptive',
         items: [
           {
-            title: 'Aspyn Platform',
+            title: 'Enterprise Platform',
             description: 'Leading the development of a multi-tenant, microservice-based enterprise platform powering field operations, routing, scheduling, licensing, and compliance for a $500M+ pest control business.'
           },
           {
