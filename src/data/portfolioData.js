@@ -104,9 +104,9 @@ export const portfolioData = {
       period: '08/2023 - Present',
       logo: '/aptive_logo.png',
       achievements: [
-        'Directed development of the Field Ops and Licensing modules within Project Cleo, Aptive\'s AI-accelerated enterprise platform unifying CRM, Sales, Operations, and Compliance.',
-        'Leveraged AI across the SDLC to generate code, automate testing, and document APIs — cutting delivery timelines by 40% and enabling deployment in under 12 months.',
-        'Defined product vision and architecture for intelligent scheduling and licensing systems that automated routing, credential enforcement, and workforce planning across 3.5M+ annual appointments.',
+        'Directed development of the Field Ops and Licensing modules within Project Cleo, Aptive\'s AI-accelerated enterprise platform unifying CRM, Sales, Operations, and Compliance supporting over $500 million in annual revenue.',
+        'Leveraged AI across the SDLC to generate code, automate testing, and document APIs — cutting delivery timelines by 40% and enabling deployment of our enterprise-grade platform with multi-tenant, micro-service architecture in under 16 months.',
+        'Defined product vision and architecture for intelligent scheduling and licensing systems that automated scheduling, vehicle routing, credential enforcement, and workforce capacity planning across 3.5M+ annual appointments.',
         'Championed user-centered design, integrating field research and usability testing to drive adoption and streamline workflows for thousands of technicians and managers.',
         'Established shared design systems and reusable components, ensuring cross-app consistency and faster feature delivery.',
         'Delivered $4.5M+ in projected annual savings through automation, workflow optimization, and AI-driven execution.'
