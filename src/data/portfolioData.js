@@ -101,7 +101,7 @@ export const portfolioData = {
       title: 'Product Manager II',
       company: 'Aptive Environmental LLC',
       location: 'Provo, UT',
-      period: '08/2023 - Present',
+      period: '08/2023 - 05/2026',
       logo: '/aptive_logo.png',
       achievements: [
         'Directed development of the Field Ops and Licensing modules within Project Cleo, Aptive\'s AI-accelerated enterprise platform unifying CRM, Sales, Operations, and Compliance supporting over $500 million in annual revenue.',
