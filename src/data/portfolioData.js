@@ -98,15 +98,15 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: 'Product Manager II',
+      title: 'Product Manager II | Product Lead — Operations',
       company: 'Aptive Environmental LLC',
       location: 'Provo, UT',
       period: '08/2023 - 05/2026',
       logo: '/aptive_logo.png',
       achievements: [
-        'Directed development of the Field Ops and Licensing modules within Project Cleo, Aptive\'s AI-accelerated enterprise platform unifying CRM, Sales, Operations, and Compliance supporting over $500 million in annual revenue.',
-        'Leveraged AI across the SDLC to generate code, automate testing, and document APIs — cutting delivery timelines by 40% and enabling deployment of our enterprise-grade platform with multi-tenant, micro-service architecture in under 16 months.',
-        'Defined product vision and architecture for intelligent scheduling and licensing systems that automated scheduling, vehicle routing, credential enforcement, and workforce capacity planning across 3.5M+ annual appointments.',
+        'Directed development of the Field Ops and Licensing modules within Project Cleo, Aptive\'s next-generation enterprise platform unifying CRM, Sales, Operations, and Compliance supporting over $500 million in annual revenue.',
+        'Integrated AI-assisted development workflows for code generation, automated testing, and API documentation—reducing delivery timelines by 40% and accelerating platform deployment.',
+        'Defined product vision for intelligent scheduling, routing, credential enforcement, and workforce capacity planning systems supporting 3.5M+ annual appointments.',
         'Championed user-centered design, integrating field research and usability testing to drive adoption and streamline workflows for thousands of technicians and managers.',
         'Established shared design systems and reusable components, ensuring cross-app consistency and faster feature delivery.',
         'Delivered $4.5M+ in projected annual savings through automation, workflow optimization, and AI-driven execution.'
@@ -141,8 +141,8 @@ export const portfolioData = {
         'Assessed client projects to determine viability/marketability and validate case for ROI.',
         'Conducted critical user research/interviews in order to gain insight & empathy regarding problems facing customers.',
         'Determined core feature sets and sketched workflow rough drafts for UX enhancements for client software.',
-        'Evaluated UX in contrast with new UX to demonstrate usability and design enhancements.',
-        'Created prototypes of client products using UX design software to validate design with users and improve user/client satisfaction by 98%.',
+        'Evaluated old UX in contrast with new UX to demonstrate usability improvements and design enhancements.',
+        'Created prototypes of client products using UX design software to validate design with users and improve client/user satisfaction by 98%.',
         'Generated and transferred style guides, color palettes, and other assets to engineering teams with a 100% success rate.'
       ],
       featured: true
@@ -184,7 +184,7 @@ export const portfolioData = {
       degree: 'Master of Business Administration, Technology Management Emphasis',
       school: 'Utah Valley University',
       location: 'Orem, UT',
-      graduationDate: 'August 2022',
+      graduationDate: 'August 2021',
       logo: '/uvu_logo.png',
       description: 'Focused on strategic product management, technology innovation, and business analytics.',
       achievements: []
