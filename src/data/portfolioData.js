@@ -1,7 +1,7 @@
 export const portfolioData = {
   personal: {
     name: 'Stephen Warren',
-    role: 'Visionary Product Manager',
+    role: 'Senior Product Manager',
     email: 'swarren@mail.com',
     location: 'Santaquin, UT',
     phone: '801.857.8641',
@@ -10,7 +10,7 @@ export const portfolioData = {
 
   hero: {
     name: 'Stephen Warren',
-    role: 'Visionary Product Manager',
+    role: 'Senior Product Manager',
     tagline: 'Visionary product manager with demonstrated history of elevating user interfaces and delivering world-class experiences through data-driven analysis and strategic design.',
     cta: [
       { text: 'View My Work', href: '#portfolio' },
@@ -26,11 +26,11 @@ export const portfolioData = {
         content: 'As a Product Manager, I\'m passionate about building platforms that transform complex operations into intuitive, scalable solutions. My work blends innovation, user-centered design, and strategic execution to deliver measurable business impact.'
       },
       {
-        heading: 'Recent Accomplishments at Aptive',
+        heading: 'Accomplishments at Aptive',
         items: [
           {
             title: 'Enterprise Platform',
-            description: 'Leading the development of a multi-tenant, microservice-based enterprise platform powering field operations, routing, scheduling, licensing, and compliance for a $500M+ pest control business.'
+            description: 'Led the development of a multi-tenant, microservice-based enterprise platform powering field operations, routing, scheduling, licensing, and compliance for a $500M+ pest control business.'
           },
           {
             title: 'Routing Optimization (ARO)',
