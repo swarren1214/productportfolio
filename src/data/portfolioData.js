@@ -632,6 +632,21 @@ export const portfolioData = {
     }
   ],
 
+  // Articles Section
+  articles: [
+    {
+      id: 1,
+      title: 'The AI Product Illusion',
+      date: 'May 7, 2026',
+      readTime: '8 min read',
+      excerpt: 'Why faster software development with AI does not automatically lead to better product experiences, and why UX and product judgment still matter most.',
+      tags: ['AI', 'Product Management', 'UX'],
+      markdownFile: 'the-ai-product-illusion.md'
+    },
+    // Add articles with: id, title, date, readTime, excerpt, tags, and markdownFile (or url)
+    // Example markdownFile value: 'my-first-article.md' (stored in public/articles/)
+  ],
+
   // References Section
   references: [
     {
