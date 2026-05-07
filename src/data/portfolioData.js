@@ -10,11 +10,11 @@ export const portfolioData = {
 
   hero: {
     name: 'Stephen Warren',
-    role: 'Senior Product Manager',
-    tagline: 'Visionary product manager with demonstrated history of elevating user interfaces and delivering world-class experiences through data-driven analysis and strategic design.',
+    role: 'Product Leader • Systems Architect • UX Strategist',
+    tagline: 'Building intelligent software platforms that simplify operations, elevate user experience, and deliver measurable business outcomes.',
     cta: [
       { text: 'View My Work', href: '#portfolio' },
-      { text: 'Contact Me', href: '#contact', variant: 'outline' }
+      { text: 'Let\'s Connect', href: '#contact', variant: 'outline' }
     ]
   },
 

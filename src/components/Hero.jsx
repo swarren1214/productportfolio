@@ -102,38 +102,38 @@ const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center max-w-5xl mx-auto bg-white/10 dark:bg-black/10 border border-white/10 dark:border-black/10 backdrop-blur-sm shadow-lg rounded-3xl p-8 md:p-12 lg:p-16"
+          className="text-center max-w-5xl mx-auto bg-white/10 dark:bg-black/10 border border-white/10 dark:border-black/10 backdrop-blur-sm shadow-lg rounded-2xl md:rounded-3xl px-5 py-8 sm:px-8 sm:py-10 md:p-12 lg:p-16"
         >
           <motion.h1
             variants={itemVariants}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-white mb-4"
+            className="text-4xl leading-tight sm:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-white mb-3 sm:mb-4"
           >
-            Stephen Warren
+            {hero.name}
           </motion.h1>
           
           <motion.p
             variants={itemVariants}
-            className="text-2xl sm:text-3xl lg:text-4xl text-gray-800/50 dark:text-white/50 font-semibold mb-6"
+            className="text-xl leading-snug sm:text-3xl lg:text-4xl text-gray-800/50 dark:text-white/50 font-semibold mb-4 sm:mb-6 max-w-4xl mx-auto"
           >
-            Visionary Product Manager
+            {hero.role}
           </motion.p>
           
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-gray-800/75 dark:text-white/75 max-w-2xl mx-auto mb-8"
+            className="text-base leading-relaxed sm:text-xl text-gray-800/75 dark:text-white/75 max-w-2xl mx-auto mb-6 sm:mb-8"
           >
-            Elevating interfaces • Optimizing operations • Delivering measurable impact
+            {hero.tagline}
           </motion.p>
           
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
             {hero.cta.map((button, index) => (
               <a
                 key={index}
                 href={button.href}
-                className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-white ${
+                className={`w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-white ${
                   button.variant === 'outline'
                     ? 'bg-secondary-600 border border-white hover:bg-secondary-800'
                     : 'bg-primary-600 hover:bg-primary-800'
