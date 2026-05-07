@@ -42,6 +42,8 @@ const ArticlePage = ({ article, onBack }) => {
   const [error, setError] = useState('')
   const [isHeaderCompact, setIsHeaderCompact] = useState(false)
   const contentScrollRef = useRef(null)
+  const articleViewTimeRef = useRef(Date.now())
+  const hasTrackedViewRef = useRef(false)
 
   useEffect(() => {
     const scrollEl = contentScrollRef.current
@@ -58,6 +60,57 @@ const ArticlePage = ({ article, onBack }) => {
       scrollEl.removeEventListener('scroll', onScroll)
     }
   }, [])
+
+  // Track article view event
+  useEffect(() => {
+    if (!isLoading && !error && content && !hasTrackedViewRef.current) {
+      hasTrackedViewRef.current = true
+      articleViewTimeRef.current = Date.now()
+
+      // Send event to Google Analytics
+      if (window.gtag) {
+        window.gtag('event', 'view_article', {
+          article_title: article.title,
+          article_id: article.id,
+          article_slug: article.slug || article.markdownFile,
+          event_category: 'engagement',
+          event_label: article.title,
+        })
+      }
+    }
+  }, [isLoading, error, content, article.title, article.id, article.slug, article.markdownFile])
+
+  // Track time spent and scroll depth on article
+  useEffect(() => {
+    return () => {
+      // Calculate time spent in seconds
+      const timeSpentMs = Date.now() - articleViewTimeRef.current
+      const timeSpentSeconds = Math.round(timeSpentMs / 1000)
+
+      // Calculate scroll depth
+      const scrollEl = contentScrollRef.current
+      let scrollDepthPercent = 0
+      if (scrollEl) {
+        const scrollHeight = scrollEl.scrollHeight - scrollEl.clientHeight
+        if (scrollHeight > 0) {
+          scrollDepthPercent = Math.round((scrollEl.scrollTop / scrollHeight) * 100)
+        }
+      }
+
+      // Send event to Google Analytics
+      if (window.gtag) {
+        window.gtag('event', 'article_engagement', {
+          article_title: article.title,
+          article_id: article.id,
+          article_slug: article.slug || article.markdownFile,
+          time_spent_seconds: timeSpentSeconds,
+          scroll_depth_percent: scrollDepthPercent,
+          event_category: 'engagement',
+          event_label: article.title,
+        })
+      }
+    }
+  }, [article])
 
   useEffect(() => {
     let isCancelled = false

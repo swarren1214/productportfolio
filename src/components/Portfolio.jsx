@@ -64,6 +64,16 @@ const Portfolio = () => {
               whileHover={{ y: -10 }}
               onClick={() => {
                 if (project.caseStudy) {
+                  // Track case study view event
+                  if (window.gtag) {
+                    window.gtag('event', 'view_case_study', {
+                      case_study_id: project.id,
+                      case_study_title: project.title,
+                      case_study_category: project.category,
+                      event_category: 'engagement',
+                      event_label: project.title,
+                    })
+                  }
                   setSelectedProject(project)
                   setCarouselIndex(0) // Reset carousel to first image
                 }
@@ -144,7 +154,20 @@ const Portfolio = () => {
                       href={project.caseStudyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        // Track external case study link click
+                        if (window.gtag) {
+                          window.gtag('event', 'click_case_study_url', {
+                            case_study_id: project.id,
+                            case_study_title: project.title,
+                            case_study_url: project.caseStudyUrl,
+                            case_study_category: project.category,
+                            event_category: 'engagement',
+                            event_label: project.title,
+                          })
+                        }
+                      }}
                       className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold transition-colors"
                     >
                       <span>View Case Study</span>
@@ -170,7 +193,18 @@ const Portfolio = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 md:p-8"
-              onClick={() => setSelectedProject(null)}
+              onClick={() => {
+                // Track case study modal close event
+                if (window.gtag) {
+                  window.gtag('event', 'close_case_study', {
+                    case_study_id: selectedProject.id,
+                    case_study_title: selectedProject.title,
+                    event_category: 'engagement',
+                    event_label: selectedProject.title,
+                  })
+                }
+                setSelectedProject(null)
+              }}
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0, y: 50 }}
@@ -186,7 +220,18 @@ const Portfolio = () => {
                     {selectedProject.caseStudy.title}
                   </h2>
                   <button
-                    onClick={() => setSelectedProject(null)}
+                    onClick={() => {
+                      // Track case study modal close event
+                      if (window.gtag) {
+                        window.gtag('event', 'close_case_study', {
+                          case_study_id: selectedProject.id,
+                          case_study_title: selectedProject.title,
+                          event_category: 'engagement',
+                          event_label: selectedProject.title,
+                        })
+                      }
+                      setSelectedProject(null)
+                    }}
                     className="flex-shrink-0 p-2 md:p-2.5 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors shadow-lg"
                   >
                     <FiX className="w-5 h-5 md:w-6 md:h-6 text-gray-700 dark:text-gray-300" />
@@ -226,6 +271,18 @@ const Portfolio = () => {
                           href={selectedProject.caseStudy.appStoreUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() => {
+                            // Track App Store link click
+                            if (window.gtag) {
+                              window.gtag('event', 'click_app_store', {
+                                case_study_id: selectedProject.id,
+                                case_study_title: selectedProject.title,
+                                app_store_url: selectedProject.caseStudy.appStoreUrl,
+                                event_category: 'engagement',
+                                event_label: selectedProject.title,
+                              })
+                            }
+                          }}
                           className="inline-block transition-transform hover:scale-105 select-none"
                         >
                           <img

@@ -46,6 +46,17 @@ const Articles = ({ onOpenArticle = () => {} }) => {
         document.body.removeChild(textArea)
       }
 
+      // Track link copy event
+      if (window.gtag) {
+        window.gtag('event', 'copy_article_link', {
+          article_title: article.title,
+          article_id: article.id,
+          article_slug: article.slug || article.markdownFile,
+          event_category: 'engagement',
+          event_label: article.title,
+        })
+      }
+
       setCopiedArticleId(article.id)
     } catch {
       setCopiedArticleId(null)
@@ -123,11 +134,34 @@ const Articles = ({ onOpenArticle = () => {} }) => {
 
               const openFromCard = () => {
                 if (hasMarkdown) {
+                  // Track article click event
+                  if (window.gtag) {
+                    window.gtag('event', 'click_article', {
+                      article_title: article.title,
+                      article_id: article.id,
+                      article_slug: article.slug || article.markdownFile,
+                      article_source: 'articles_list',
+                      event_category: 'engagement',
+                      event_label: article.title,
+                    })
+                  }
                   onOpenArticle(article)
                   return
                 }
 
                 if (article.url) {
+                  // Track external article click
+                  if (window.gtag) {
+                    window.gtag('event', 'click_article', {
+                      article_title: article.title,
+                      article_id: article.id,
+                      article_slug: article.slug || article.markdownFile,
+                      article_source: 'external_link',
+                      article_url: article.url,
+                      event_category: 'engagement',
+                      event_label: article.title,
+                    })
+                  }
                   window.open(article.url, '_blank', 'noopener,noreferrer')
                 }
               }

@@ -8,7 +8,19 @@ const Projects = () => {
   const featuredProjects = projects.filter(p => p.featured !== false)
   const [expandedCards, setExpandedCards] = useState({})
 
-  const toggleCard = (projectId) => {
+  const toggleCard = (projectId, projectTitle) => {
+    const isExpanding = !expandedCards[projectId]
+    
+    // Track project expansion event
+    if (window.gtag) {
+      window.gtag('event', isExpanding ? 'expand_project' : 'collapse_project', {
+        project_id: projectId,
+        project_title: projectTitle,
+        event_category: 'engagement',
+        event_label: projectTitle,
+      })
+    }
+    
     setExpandedCards(prev => ({
       ...prev,
       [projectId]: !prev[projectId]
@@ -73,7 +85,7 @@ const Projects = () => {
                   {/* Header with Logo and Title */}
                   <div 
                     className={`flex items-center gap-4 cursor-pointer ${isExpanded ? 'mb-4' : ''}`}
-                    onClick={() => toggleCard(project.id)}
+                    onClick={() => toggleCard(project.id, project.title)}
                   >
                     {/* Company Logo */}
                     <div className="flex-shrink-0">
