@@ -626,6 +626,15 @@ export const portfolioData = {
       tags: ['AI', 'Product Management', 'UX'],
       markdownFile: 'the-ai-product-illusion.md'
     },
+    {
+      id: 2,
+      title: 'The Edge Case Is the Product',
+      date: 'May 7, 2026',
+      readTime: '9 min read',
+      excerpt: 'Why customers remember what happens when things go wrong, and how edge-case UX is what builds trust in real-world products.',
+      tags: ['Product Management', 'UX', 'Reliability'],
+      markdownFile: 'the-edge-case-is-the-product.md'
+    },
     // Add articles with: id, title, date, readTime, excerpt, tags, and markdownFile (or url)
     // Example markdownFile value: 'my-first-article.md' (stored in public/articles/)
   ],
