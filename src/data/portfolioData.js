@@ -22,37 +22,20 @@ export const portfolioData = {
     title: 'About Me',
     sections: [
       {
-        heading: 'Product Leadership',
-        content: 'As a Product Manager, I\'m passionate about building platforms that transform complex operations into intuitive, scalable solutions. My work blends innovation, user-centered design, and strategic execution to deliver measurable business impact.'
+        heading: 'Building systems that make businesses smarter',
+        content: 'I\'m a Product Manager focused on designing software that solves hard operational problems at scale.\n\nMy background sits at the intersection of product strategy, systems architecture, UX design, and AI-enabled execution—helping organizations turn complexity into elegant, measurable solutions. Whether I\'m shaping platform architecture, rethinking workflows, or defining product vision, my focus is always the same: build products people love using that materially improve business performance.'
       },
       {
-        heading: 'Accomplishments at Aptive',
-        items: [
-          {
-            title: 'Enterprise Platform',
-            description: 'Led the development of a multi-tenant, microservice-based enterprise platform powering field operations, routing, scheduling, licensing, and compliance for a $500M+ pest control business.'
-          },
-          {
-            title: 'Routing Optimization (ARO)',
-            description: 'Spearheaded the creation of an in-house routing engine, improving appointments per gallon from 1.5 → 2.0 and reducing fleet travel time by 23%, driving $2M+ in annual cost savings.'
-          },
-          {
-            title: 'Operational UI',
-            description: 'Designed and launched a dedicated routing and scheduling interface that gave leaders real-time visibility into routes, appointments, and technician shifts.'
-          },
-          {
-            title: 'Licensing & Compliance',
-            description: 'Built a compliance platform ensuring EPA and state regulatory adherence, reducing audit risk and streamlining technician credential management.'
-          },
-          {
-            title: 'Data & Analytics',
-            description: 'Delivered dashboards that enabled managers to track KPIs, monitor performance, and enforce compliance in real time.'
-          }
-        ]
+        heading: 'Aptive Environmental',
+        content: 'At Aptive Environmental, I led product development for Field Ops and Licensing, two of the most operationally complex domains within Aptive\'s next-generation enterprise platform—supporting over $500M in annual revenue and 3.5M+ annual service appointments. Through automation, workflow redesign, and AI-accelerated development practices, my work contributed to $4.5M+ in projected annual savings while reducing delivery timelines by 40%.'
       },
       {
-        heading: 'Product Philosophy',
-        content: 'Grounded with a background in UX/UI design, I believe every product decision should be informed by empathy, data, and measurable outcomes. My focus is making complex workflows simple—helping users and businesses achieve more with less friction.'
+        heading: 'Legrand North America',
+        content: 'Previously at Legrand North America, I redesigned technician-facing mobile workflows that cut setup time in half, improved adoption, and transformed complex technical systems into intuitive experiences.'
+      },
+      {
+        heading: 'My Philosophy',
+        content: 'Great products don\'t happen by accident—they happen when strategy, empathy, design, and execution align.\n\nI build products where those things come together.'
       }
     ],
     image: '/headshot.png',
