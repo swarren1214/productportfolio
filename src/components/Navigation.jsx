@@ -42,7 +42,7 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-8">
             {navLinks.map(link => (
               <a
                 key={link.name}
@@ -56,7 +56,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center space-x-2">
+          <div className="xl:hidden flex items-center space-x-2">
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -75,7 +75,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white/5 dark:bg-gray-900/5 backdrop-blur-lg">
+        <div className="xl:hidden bg-white/5 dark:bg-gray-900/5 backdrop-blur-lg">
           <div className="section-container py-4 space-y-2">
             {navLinks.map(link => (
               <a
