@@ -74,7 +74,7 @@ const Contact = () => {
       {/* Footer */}
       <div className="section-container mt-20 pt-8 border-t border-gray-200 dark:border-gray-700">
         <p className="text-center text-gray-600 dark:text-gray-400">
-          © {new Date().getFullYear()} {portfolioData.personal.name}. Built with React, Vite, Tailwind CSS, and Framer Motion.
+          © {new Date().getFullYear()} {portfolioData.personal.name}. All rights reserved.
         </p>
       </div>
     </section>
