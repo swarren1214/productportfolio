@@ -193,7 +193,7 @@ export const portfolioData = {
       image: '/project-cleo-cover.png',
       metrics: [
         { value: '<12mo', label: 'Delivery Time' },
-        { value: '$500M+', label: 'Projected Growth' }
+        { value: '$500M+', label: 'Annual Revenue Supported' }
       ],
       tags: ['Product Management', 'AI Development', 'UX Research', 'Enterprise Architecture'],
       caseStudy: {

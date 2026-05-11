@@ -1,12 +1,122 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiArrowRight, FiExternalLink, FiX } from 'react-icons/fi'
+import { FiArrowRight, FiCheck, FiExternalLink, FiLink, FiX } from 'react-icons/fi'
 import { portfolioData } from '../data/portfolioData'
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
-const Portfolio = () => {
+const slugify = (value) =>
+  String(value || '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+
+const getCaseStudySlug = (project) => {
+  if (project?.caseStudy?.slug) return project.caseStudy.slug
+  if (project?.slug) return project.slug
+  if (project?.title) return slugify(project.title)
+  return String(project?.id || '')
+}
+
+const getCaseStudyShareUrl = (project) => {
+  const slug = getCaseStudySlug(project)
+  const encodedSlug = encodeURIComponent(slug)
+  const shareUrl = new URL(window.location.href)
+  shareUrl.search = ''
+  shareUrl.hash = `case-study/${encodedSlug}`
+  return shareUrl.toString()
+}
+
+const Portfolio = ({ selectedCaseStudySlug, onOpenCaseStudy, onCloseCaseStudy }) => {
   const { portfolio } = portfolioData
   const [selectedProject, setSelectedProject] = useState(null)
   const [carouselIndex, setCarouselIndex] = useState(0)
+  const [copyState, setCopyState] = useState('idle')
+
+  const caseStudyProjects = useMemo(
+    () => (portfolio || []).filter((project) => project.caseStudy),
+    [portfolio]
+  )
+
+  useEffect(() => {
+    if (!selectedCaseStudySlug) {
+      setSelectedProject(null)
+      setCopyState('idle')
+      return
+    }
+
+    const projectFromSlug = caseStudyProjects.find(
+      (project) => getCaseStudySlug(project) === selectedCaseStudySlug
+    )
+
+    if (projectFromSlug) {
+      setSelectedProject(projectFromSlug)
+      setCarouselIndex(0)
+      setCopyState('idle')
+    }
+  }, [caseStudyProjects, selectedCaseStudySlug])
+
+  useEffect(() => {
+    if (copyState !== 'copied') return undefined
+
+    const timeoutId = window.setTimeout(() => {
+      setCopyState('idle')
+    }, 1800)
+
+    return () => window.clearTimeout(timeoutId)
+  }, [copyState])
+
+  const handleOpenProject = (project) => {
+    if (!project.caseStudy) return
+
+    if (window.gtag) {
+      window.gtag('event', 'view_case_study', {
+        case_study_id: project.id,
+        case_study_title: project.title,
+        case_study_category: project.category,
+        event_category: 'engagement',
+        event_label: project.title,
+      })
+    }
+
+    if (onOpenCaseStudy) {
+      onOpenCaseStudy(project)
+      return
+    }
+
+    setSelectedProject(project)
+    setCarouselIndex(0)
+  }
+
+  const handleCloseProject = () => {
+    if (selectedProject && window.gtag) {
+      window.gtag('event', 'close_case_study', {
+        case_study_id: selectedProject.id,
+        case_study_title: selectedProject.title,
+        event_category: 'engagement',
+        event_label: selectedProject.title,
+      })
+    }
+
+    if (onCloseCaseStudy) {
+      onCloseCaseStudy()
+      return
+    }
+
+    setSelectedProject(null)
+    setCopyState('idle')
+  }
+
+  const handleCopyCaseStudyLink = async () => {
+    if (!selectedProject) return
+
+    try {
+      const shareUrl = getCaseStudyShareUrl(selectedProject)
+      await navigator.clipboard.writeText(shareUrl)
+      setCopyState('copied')
+    } catch {
+      setCopyState('error')
+    }
+  }
 
   const staggerContainer = {
     hidden: { opacity: 0 },
@@ -62,22 +172,7 @@ const Portfolio = () => {
               key={project.id}
               variants={cardVariants}
               whileHover={{ y: -10 }}
-              onClick={() => {
-                if (project.caseStudy) {
-                  // Track case study view event
-                  if (window.gtag) {
-                    window.gtag('event', 'view_case_study', {
-                      case_study_id: project.id,
-                      case_study_title: project.title,
-                      case_study_category: project.category,
-                      event_category: 'engagement',
-                      event_label: project.title,
-                    })
-                  }
-                  setSelectedProject(project)
-                  setCarouselIndex(0) // Reset carousel to first image
-                }
-              }}
+              onClick={() => handleOpenProject(project)}
               className={`bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl ${
                 project.caseStudy ? 'cursor-pointer' : ''
               }`}
@@ -193,18 +288,7 @@ const Portfolio = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 md:p-8"
-              onClick={() => {
-                // Track case study modal close event
-                if (window.gtag) {
-                  window.gtag('event', 'close_case_study', {
-                    case_study_id: selectedProject.id,
-                    case_study_title: selectedProject.title,
-                    event_category: 'engagement',
-                    event_label: selectedProject.title,
-                  })
-                }
-                setSelectedProject(null)
-              }}
+              onClick={handleCloseProject}
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0, y: 50 }}
@@ -219,23 +303,30 @@ const Portfolio = () => {
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-bold gradient-text line-clamp-2 flex-1 min-w-0">
                     {selectedProject.caseStudy.title}
                   </h2>
-                  <button
-                    onClick={() => {
-                      // Track case study modal close event
-                      if (window.gtag) {
-                        window.gtag('event', 'close_case_study', {
-                          case_study_id: selectedProject.id,
-                          case_study_title: selectedProject.title,
-                          event_category: 'engagement',
-                          event_label: selectedProject.title,
-                        })
-                      }
-                      setSelectedProject(null)
-                    }}
-                    className="flex-shrink-0 p-2 md:p-2.5 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors shadow-lg"
-                  >
-                    <FiX className="w-5 h-5 md:w-6 md:h-6 text-gray-700 dark:text-gray-300" />
-                  </button>
+                  <div className="flex items-center gap-2 flex-shrink-0">
+                    <button
+                      onClick={handleCopyCaseStudyLink}
+                      className="flex-shrink-0 p-2 md:p-2.5 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors shadow-lg"
+                      aria-label="Copy case study link"
+                      title="Copy case study link"
+                    >
+                      {copyState === 'copied' ? (
+                        <>
+                          <FiCheck className="w-5 h-5 md:w-6 md:h-6 text-green-700 dark:text-gray-300" />
+                        </>
+                      ) : (
+                        <>
+                          <FiLink className="w-5 h-5 md:w-6 md:h-6 text-gray-700 dark:text-gray-300" />
+                        </>
+                      )}
+                    </button>
+                    <button
+                      onClick={handleCloseProject}
+                      className="flex-shrink-0 p-2 md:p-2.5 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors shadow-lg"
+                    >
+                      <FiX className="w-5 h-5 md:w-6 md:h-6 text-gray-700 dark:text-gray-300" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Scrollable Modal Content */}

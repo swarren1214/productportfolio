@@ -20,15 +20,46 @@ const getArticleSlug = (article) => {
 }
 
 const ARTICLE_HASH_PREFIX = '#article/'
+const CASE_STUDY_HASH_PREFIX = '#case-study/'
 
-const getSelectedSlug = () => {
+const slugify = (value) =>
+  String(value || '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+
+const getCaseStudySlug = (project) => {
+  if (project?.caseStudy?.slug) return project.caseStudy.slug
+  if (project?.slug) return project.slug
+  if (project?.title) return slugify(project.title)
+  return String(project?.id || '')
+}
+
+const getSelectedRoute = () => {
   const { hash } = window.location
   if (hash && hash.startsWith(ARTICLE_HASH_PREFIX)) {
-    return decodeURIComponent(hash.slice(ARTICLE_HASH_PREFIX.length))
+    return {
+      articleSlug: decodeURIComponent(hash.slice(ARTICLE_HASH_PREFIX.length)),
+      caseStudySlug: null,
+    }
+  }
+
+  if (hash && hash.startsWith(CASE_STUDY_HASH_PREFIX)) {
+    return {
+      articleSlug: null,
+      caseStudySlug: decodeURIComponent(hash.slice(CASE_STUDY_HASH_PREFIX.length)),
+    }
   }
 
   const params = new URLSearchParams(window.location.search)
-  return params.get('article')
+  const articleSlug = params.get('article')
+  const caseStudySlug = params.get('case-study') || params.get('caseStudy')
+
+  return {
+    articleSlug,
+    caseStudySlug: articleSlug ? null : caseStudySlug,
+  }
 }
 
 const scrollToArticlesSection = () => {
@@ -42,19 +73,22 @@ const scrollToArticlesSection = () => {
 }
 
 function App() {
-  const [selectedSlug, setSelectedSlug] = useState(getSelectedSlug)
+  const [selectedSlug, setSelectedSlug] = useState(() => getSelectedRoute().articleSlug)
+  const [selectedCaseStudySlug, setSelectedCaseStudySlug] = useState(() => getSelectedRoute().caseStudySlug)
   const previousMainScrollY = useRef(null)
 
   useEffect(() => {
-    const syncSelectedArticleFromUrl = () => {
-      setSelectedSlug(getSelectedSlug())
+    const syncSelectedFromUrl = () => {
+      const route = getSelectedRoute()
+      setSelectedSlug(route.articleSlug)
+      setSelectedCaseStudySlug(route.caseStudySlug)
     }
 
-    window.addEventListener('popstate', syncSelectedArticleFromUrl)
-    window.addEventListener('hashchange', syncSelectedArticleFromUrl)
+    window.addEventListener('popstate', syncSelectedFromUrl)
+    window.addEventListener('hashchange', syncSelectedFromUrl)
     return () => {
-      window.removeEventListener('popstate', syncSelectedArticleFromUrl)
-      window.removeEventListener('hashchange', syncSelectedArticleFromUrl)
+      window.removeEventListener('popstate', syncSelectedFromUrl)
+      window.removeEventListener('hashchange', syncSelectedFromUrl)
     }
   }, [])
 
@@ -69,6 +103,7 @@ function App() {
     const encodedSlug = encodeURIComponent(slug)
     window.history.pushState({}, '', `${window.location.pathname}#article/${encodedSlug}`)
     setSelectedSlug(slug)
+    setSelectedCaseStudySlug(null)
     window.scrollTo({ top: 0, behavior: 'auto' })
   }
 
@@ -90,6 +125,37 @@ function App() {
     })
   }
 
+  const openCaseStudy = (project) => {
+    const slug = getCaseStudySlug(project)
+    previousMainScrollY.current = window.scrollY
+    const encodedSlug = encodeURIComponent(slug)
+    window.history.pushState({}, '', `${window.location.pathname}#case-study/${encodedSlug}`)
+    setSelectedCaseStudySlug(slug)
+    setSelectedSlug(null)
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }
+
+  const closeCaseStudy = () => {
+    const restoreScrollY = previousMainScrollY.current
+    window.history.pushState({}, '', `${window.location.pathname}#portfolio`)
+    setSelectedCaseStudySlug(null)
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        if (typeof restoreScrollY === 'number') {
+          window.scrollTo({ top: restoreScrollY, behavior: 'auto' })
+          previousMainScrollY.current = null
+          return
+        }
+
+        const portfolioSection = document.getElementById('portfolio')
+        if (portfolioSection) {
+          portfolioSection.scrollIntoView({ behavior: 'auto', block: 'start' })
+        }
+      })
+    })
+  }
+
   return (
     <ThemeProvider>
       {selectedArticle ? (
@@ -103,7 +169,11 @@ function App() {
             <Skills />
             <Projects />
             <Education />
-            <Portfolio />
+            <Portfolio
+              selectedCaseStudySlug={selectedCaseStudySlug}
+              onOpenCaseStudy={openCaseStudy}
+              onCloseCaseStudy={closeCaseStudy}
+            />
             <Articles onOpenArticle={openArticle} />
             <References />
             <Contact />
