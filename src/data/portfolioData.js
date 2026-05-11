@@ -629,7 +629,7 @@ export const portfolioData = {
     {
       id: 2,
       title: 'The Edge Case Is the Product',
-      date: 'May 7, 2026',
+      date: 'May 9, 2026',
       readTime: '9 min read',
       excerpt: 'Why customers remember what happens when things go wrong, and how edge-case UX is what builds trust in real-world products.',
       tags: ['Product Management', 'UX', 'Reliability'],
