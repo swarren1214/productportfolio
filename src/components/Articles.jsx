@@ -13,6 +13,12 @@ const Articles = ({ onOpenArticle = () => {} }) => {
   const { articles = [] } = portfolioData
   const [copiedArticleId, setCopiedArticleId] = useState(null)
 
+  const sortedArticles = [...articles].sort((a, b) => {
+    const aDate = a.date ? Date.parse(a.date) : Number.NEGATIVE_INFINITY
+    const bDate = b.date ? Date.parse(b.date) : Number.NEGATIVE_INFINITY
+    return bDate - aDate
+  })
+
   useEffect(() => {
     if (!copiedArticleId) return undefined
 
@@ -103,7 +109,7 @@ const Articles = ({ onOpenArticle = () => {} }) => {
           Writing on product strategy, UX, and lessons learned from building at scale.
         </motion.p>
 
-        {articles.length === 0 ? (
+        {sortedArticles.length === 0 ? (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +134,7 @@ const Articles = ({ onOpenArticle = () => {} }) => {
             viewport={{ once: true, amount: 0.2 }}
             className="grid md:grid-cols-2 gap-8"
           >
-            {articles.map((article) => {
+            {sortedArticles.map((article) => {
               const hasMarkdown = Boolean(article.markdownFile)
               const isClickable = hasMarkdown || Boolean(article.url)
 

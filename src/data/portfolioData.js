@@ -635,6 +635,15 @@ export const portfolioData = {
       tags: ['Product Management', 'UX', 'Reliability'],
       markdownFile: 'the-edge-case-is-the-product.md'
     },
+    {
+      id: 3,
+      title: 'The AI Race Is Becoming an Energy Race',
+      date: 'May 14, 2026',
+      readTime: '10 min read',
+      excerpt: 'Why the next AI battleground is infrastructure efficiency, where performance per watt, cooling, and deployment economics may matter more than marginal model gains.',
+      tags: ['AI', 'Infrastructure', 'Strategy'],
+      markdownFile: 'the-ai-race-is-becoming-an-energy-race.md'
+    },
     // Add articles with: id, title, date, readTime, excerpt, tags, and markdownFile (or url)
     // Example markdownFile value: 'my-first-article.md' (stored in public/articles/)
   ],
