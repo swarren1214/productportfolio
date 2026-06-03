@@ -612,6 +612,119 @@ export const portfolioData = {
         },
         images: []
       }
+    },
+    {
+      id: 5,
+      title: 'BigTable',
+      category: 'Consumer Mobile App Development',
+      description: 'Designed and built BigTable solo — a full-stack meal planning and kitchen coordination app for families, powered by AI. Shipped the API, React Native client, database, production infrastructure, and marketing site from scratch.',
+      image: '/bigtable-cover.png',
+      metrics: [
+        { value: '100%', label: 'Solo Built' },
+        { value: 'AI-Powered', label: 'Claude + Gemini' }
+      ],
+      tags: ['Full-Stack Development', 'React Native', 'AI Integration', 'Product Design'],
+      caseStudy: {
+        title: '🍽️ BigTable: The Family Kitchen, Reimagined',
+        overview: 'BigTable is a meal planning and kitchen coordination app built for the way real families actually live. Whether feeding a household of two or wrangling a family of seven with dietary preferences, food allergies, and competing schedules — BigTable brings everyone to the same table.\n\nThe app lets families:\n• Plan every meal with a week-at-a-glance planner shared across the household\n• Build a personal recipe library from photos, voice notes, or AI generation\n• Generate organized, categorized grocery lists automatically from the meal plan\n• Follow other home cooks and publish their own recipes to a food community\n\nI built every layer of BigTable myself — from the backend API to the React Native client to the production infrastructure — and brought it to market with a marketing website and original promotional content.',
+        role: {
+          title: '🛠️ My Role',
+          description: 'I was the sole builder and product owner — responsible for every layer of the product:',
+          responsibilities: [
+            'Designed and built the React Native mobile client for iOS and Android.',
+            'Architected and implemented the backend API, including authentication, data modeling, and business logic.',
+            'Designed and managed the production and staging database environments.',
+            'Deployed and maintained production and staging infrastructure.',
+            'Integrated AI capabilities using Claude and Gemini for meal planning, recipe scanning, image generation, and voice-to-recipe transcription.',
+            'Created the marketing website and all promotional content to support the launch.'
+          ],
+          footer: 'Building BigTable alone meant making every tradeoff consciously — balancing scope, quality, and delivery without a team to delegate to.'
+        },
+        challenge: {
+          title: '🧠 The Core Problem',
+          description: 'Most meal planning apps treat the problem as a personal one. BigTable was designed around a different insight: the real pain point is coordination — the daily friction of aligning schedules, preferences, and grocery responsibilities across an entire household.\n\nThe challenges that shaped the product:',
+          points: [
+            'Meal planning apps exist but are built for individuals, not households with shared ownership.',
+            'Recipe management is scattered — cookbooks, screenshots, voice notes, and browser tabs with no central home.',
+            'Grocery lists are still manual in most households, despite being entirely derivable from a meal plan.',
+            'AI tools for food exist but aren\'t embedded in the context where families actually make decisions.'
+          ],
+          footer: '"What\'s for dinner?" is a question that costs families hours per week. BigTable was built to answer it once, for everyone.'
+        },
+        design: {
+          title: '🎨 Product Design Decisions',
+          description: 'Building solo forced early, explicit prioritization. Every feature had to earn its place in the MVP. Key design decisions included:',
+          points: [
+            'Household-first data model: recipes, meal plans, and grocery lists belong to a household, not a user — enabling real shared ownership.',
+            'AI as a first-class feature: rather than an optional add-on, AI is embedded in core workflows — planning, importing, and generating recipes.',
+            'Single grocery list derived from the plan: eliminates duplicate buys and forgotten items without any manual effort from the family.',
+            'Social layer for home cooks: a community feed where real families can publish and follow recipes — not influencer content, but everyday cooking.',
+            'Permission model: household members get the right level of access — editors, viewers, or admins — without adding management overhead.'
+          ],
+          footer: 'The hardest design problem was making a complex, multi-user system feel as simple as a single-person app.'
+        },
+        technical: {
+          title: '⚙️ Technical Architecture',
+          description: 'BigTable is a full-stack product built and operated entirely by one person:',
+          points: [
+            'React Native client: cross-platform mobile app for iOS and Android with a shared codebase.',
+            'Custom backend API: handles authentication, household management, recipe CRUD, meal planning, and grocery list generation.',
+            'Database design: relational schema supporting multi-user households, recipe versioning, and social features (follows, likes, saves).',
+            'AI integrations: Claude powers conversational meal planning and recipe formatting; Gemini powers recipe image generation from photos and voice transcription.',
+            'Production + staging environments: deployed and maintained with separate environments for safe iteration.',
+            'Marketing site: built and published to support discovery and user acquisition.'
+          ],
+          footer: 'Operating the full stack solo meant owning every incident, every deployment, and every architectural decision — a forcing function for simplicity and reliability.'
+        },
+        launch: {
+          title: '🚀 What Was Shipped',
+          description: 'BigTable was taken from concept to a production-ready app, including:',
+          metrics: [
+            'A complete React Native mobile app running on iOS and Android.',
+            'A fully functional backend API with authentication, household management, and AI-powered features.',
+            'Grocery list auto-generation from any meal plan — categorized by store section and estimated to the dollar.',
+            'AI meal planning powered by Claude and Gemini embedded directly into the app experience.',
+            'A social recipe community with publishing, following, likes, and save features.',
+            'Production and staging infrastructure deployed and operational.',
+            'A marketing website and original promotional materials ready for launch.'
+          ]
+        },
+        lessons: {
+          title: '💬 Lessons Learned',
+          items: [
+            {
+              number: '1',
+              title: 'Building solo sharpens every decision.',
+              description: 'Without a team to defer to, every tradeoff became explicit — which features were worth complexity, and which needed to wait.'
+            },
+            {
+              number: '2',
+              title: 'The household is the right unit of design.',
+              description: 'Most consumer apps optimize for individual engagement. BigTable\'s most important insight was that family tools must be designed around shared ownership, not individual accounts.'
+            },
+            {
+              number: '3',
+              title: 'AI earns its place when embedded in context.',
+              description: 'Generic AI assistants feel like features. AI that understands your household\'s preferences and generates your weekly meal plan in seconds feels like a product.'
+            },
+            {
+              number: '4',
+              title: 'Owning the full stack builds real product intuition.',
+              description: 'Shipping API, client, database, infra, and marketing as one person creates a uniquely integrated view of product-engineering tradeoffs.'
+            }
+          ]
+        },
+        outcome: {
+          title: '🎯 Impact',
+          description: 'BigTable demonstrates what a product-minded engineer can build when given full ownership of a problem. From the data model to the marketing site, every layer was designed with the same goal: make family mealtime less chaotic and more intentional.'
+        },
+        takeaway: {
+          title: '',
+          description: '',
+          quote: '"BigTable wasn\'t just a technical challenge — it was a product problem. The hardest part wasn\'t the code. It was deciding what a family actually needs."'
+        },
+        images: []
+      }
     }
   ],
 
