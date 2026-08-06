@@ -167,7 +167,7 @@ export const portfolioData = {
       degree: 'Master of Business Administration, Technology Management Emphasis',
       school: 'Utah Valley University',
       location: 'Orem, UT',
-      graduationDate: 'August 2021',
+      graduationDate: 'August 2022',
       logo: '/uvu_logo.png',
       description: 'Focused on strategic product management, technology innovation, and business analytics.',
       achievements: []
